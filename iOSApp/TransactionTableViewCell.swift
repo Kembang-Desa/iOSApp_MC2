@@ -1,17 +1,17 @@
 //
-//  InputTableViewCell.swift
+//  TransactionTableViewCell.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 29/06/22.
+//  Created by Ditha Nurcahya Avianty on 02/07/22.
 //
 
 import UIKit
 
-class InputTableViewCell: UITableViewCell {
-    
-    @IBOutlet weak var imgInputTransaction: UIImageView!
-    @IBOutlet weak var labelInputTransaction: UILabel!
-    @IBOutlet weak var buttonInputTransaction: UIButton!
+class TransactionTableViewCell: UITableViewCell {
+
+    @IBOutlet weak var titleLabel: UILabel!
+    @IBOutlet weak var dateTimeLabel: UILabel!
+    @IBOutlet weak var priceLabel: UILabel!
     
     override func awakeFromNib() {
         super.awakeFromNib()
