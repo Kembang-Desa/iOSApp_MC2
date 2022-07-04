@@ -153,6 +153,8 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
         
 //        scanImageView.image = scan.imageOfPage(at: (scan.pageCount-1))
         processImage(scan.imageOfPage(at: (scan.pageCount-1)))
+        //save di core data
+        //pindah ke view lain
         controller.dismiss(animated: true)
     }
     
