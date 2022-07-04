@@ -17,6 +17,7 @@
 		7E43D21328733A3200330C78 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43D20D28733A3200330C78 /* User+CoreDataProperties.swift */; };
 		7E43D21428733A3200330C78 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43D20E28733A3200330C78 /* Transaction+CoreDataClass.swift */; };
 		7E43D21528733A3200330C78 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43D20F28733A3200330C78 /* Transaction+CoreDataProperties.swift */; };
+		7E43D2172873445600330C78 /* ExampleCoreDataViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E43D2162873445600330C78 /* ExampleCoreDataViewController.swift */; };
 		7E75B1312873032D0070D097 /* DataTransaction.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B1302873032D0070D097 /* DataTransaction.swift */; };
 		7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B138287303BE0070D097 /* InputTableViewCell.swift */; };
 		7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B139287303BE0070D097 /* PercentageCollectionViewCell.swift */; };
@@ -46,6 +47,7 @@
 		7E43D20D28733A3200330C78 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		7E43D20E28733A3200330C78 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		7E43D20F28733A3200330C78 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7E43D2162873445600330C78 /* ExampleCoreDataViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExampleCoreDataViewController.swift; sourceTree = "<group>"; };
 		7E75B1302873032D0070D097 /* DataTransaction.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransaction.swift; sourceTree = "<group>"; };
 		7E75B138287303BE0070D097 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		7E75B139287303BE0070D097 /* PercentageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageCollectionViewCell.swift; sourceTree = "<group>"; };
@@ -105,6 +107,7 @@
 				7E43D20E28733A3200330C78 /* Transaction+CoreDataClass.swift */,
 				7E43D20F28733A3200330C78 /* Transaction+CoreDataProperties.swift */,
 				7E43D1F02873372600330C78 /* iOSApp.xcdatamodel */,
+				7E43D2162873445600330C78 /* ExampleCoreDataViewController.swift */,
 			);
 			name = CoreDataModel;
 			sourceTree = "<group>";
@@ -297,6 +300,7 @@
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
 				7E75B155287307370070D097 /* DataTransactionViewModel.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
+				7E43D2172873445600330C78 /* ExampleCoreDataViewController.swift in Sources */,
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
 				7E43D21028733A3200330C78 /* Category+CoreDataClass.swift in Sources */,
 				7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */,

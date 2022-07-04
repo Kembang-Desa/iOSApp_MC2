@@ -38,7 +38,7 @@ extension User {
         let set = transaction as? Set<Transaction> ?? []
         
         return set.sorted {
-            $0.wrappedName
+            $0.wrappedDate < $1.wrappedDate
         }
     }
 

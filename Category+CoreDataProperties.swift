@@ -25,7 +25,6 @@ extension Category {
         name ?? "Unknown Name"
     }
     
-
 }
 
 // MARK: Generated accessors for transaction
