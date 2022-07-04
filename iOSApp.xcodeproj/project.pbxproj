@@ -7,6 +7,10 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE728733B1D00183F3C /* SpeechButoon.swift */; };
+		66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE928733B6500183F3C /* SwiftUI Speech.swift */; };
+		66545BEC28733BAB00183F3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BEB28733BAB00183F3C /* ContentView.swift */; };
+		66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BEF28734C9A00183F3C /* SpeechViewController.swift */; };
 		7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884728730E2300FF7825 /* ReportViewController.swift */; };
 		7E14884B28730E3600FF7825 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */; };
 		7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */; };
@@ -31,6 +35,10 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		66545BE728733B1D00183F3C /* SpeechButoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButoon.swift; sourceTree = "<group>"; };
+		66545BE928733B6500183F3C /* SwiftUI Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
+		66545BEB28733BAB00183F3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		66545BEF28734C9A00183F3C /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
 		7E14884728730E2300FF7825 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -70,6 +78,17 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		66545BDC28732DFA00183F3C /* Speech */ = {
+			isa = PBXGroup;
+			children = (
+				66545BE728733B1D00183F3C /* SpeechButoon.swift */,
+				66545BE928733B6500183F3C /* SwiftUI Speech.swift */,
+				66545BEB28733BAB00183F3C /* ContentView.swift */,
+				66545BEF28734C9A00183F3C /* SpeechViewController.swift */,
+			);
+			name = Speech;
+			sourceTree = "<group>";
+		};
 		7E14884528730DF800FF7825 /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -166,6 +185,7 @@
 		AC35CC952862114400CB9AA6 /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				66545BDC28732DFA00183F3C /* Speech */,
 				7E14884528730DF800FF7825 /* Report */,
 				7E75B152287305130070D097 /* Settings */,
 				7E75B145287303F20070D097 /* AddTransaction */,
@@ -259,18 +279,23 @@
 				7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */,
 				7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */,
 				7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */,
+				66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,
 				7E75B141287303C50070D097 /* DashboardViewController.swift in Sources */,
+				66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */,
 				7E75B12E287302F90070D097 /* Category+CoreDataProperties.swift in Sources */,
 				7E75B12C287302F90070D097 /* Category+CoreDataClass.swift in Sources */,
 				AC35CC9B2862114400CB9AA6 /* ViewController.swift in Sources */,
 				7E75B12D287302F90070D097 /* Transaction+CoreDataClass.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
+				7E75B155287307370070D097 /* DataTransactionViewModel.swift in Sources */,
+				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
 				7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */,
+				66545BEC28733BAB00183F3C /* ContentView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -418,7 +443,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C8VS35NTZ7;
+				DEVELOPMENT_TEAM = 8FYVDX646G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
@@ -449,7 +474,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C8VS35NTZ7;
+				DEVELOPMENT_TEAM = 8FYVDX646G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
