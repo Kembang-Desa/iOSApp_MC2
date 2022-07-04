@@ -21,5 +21,7 @@
 			</array>
 		</dict>
 	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>To be able to scan documents, you must allow the use of the camera.</string>
 </dict>
 </plist>
