@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884728730E2300FF7825 /* ReportViewController.swift */; };
+		7E14884B28730E3600FF7825 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */; };
+		7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */; };
 		7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B127287302F90070D097 /* Transaction+CoreDataProperties.swift */; };
 		7E75B12C287302F90070D097 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B128287302F90070D097 /* Category+CoreDataClass.swift */; };
 		7E75B12D287302F90070D097 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B129287302F90070D097 /* Transaction+CoreDataClass.swift */; };
@@ -30,6 +33,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7E14884728730E2300FF7825 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
+		7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
+		7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
 		7E75B127287302F90070D097 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7E75B128287302F90070D097 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
 		7E75B129287302F90070D097 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
@@ -68,6 +74,24 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		7E14884528730DF800FF7825 /* Report */ = {
+			isa = PBXGroup;
+			children = (
+				7E14884728730E2300FF7825 /* ReportViewController.swift */,
+				7E14884628730DFE00FF7825 /* Cell */,
+			);
+			name = Report;
+			sourceTree = "<group>";
+		};
+		7E14884628730DFE00FF7825 /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */,
+				7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */,
+			);
+			name = Cell;
+			sourceTree = "<group>";
+		};
 		7E75B12F287303220070D097 /* Model */ = {
 			isa = PBXGroup;
 			children = (
@@ -162,6 +186,7 @@
 		AC35CC952862114400CB9AA6 /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				7E14884528730DF800FF7825 /* Report */,
 				7E75B153287307120070D097 /* ViewModel */,
 				7E75B152287305130070D097 /* Settings */,
 				7E75B145287303F20070D097 /* AddTransaction */,
@@ -241,6 +266,7 @@
 				AC35CCA02862114500CB9AA6 /* Assets.xcassets in Resources */,
 				AC35CC9E2862114400CB9AA6 /* Main.storyboard in Resources */,
 				7E75B13F287303BF0070D097 /* InputTableViewCell.xib in Resources */,
+				7E14884B28730E3600FF7825 /* TransactionTableViewCell.xib in Resources */,
 				7E75B13E287303BF0070D097 /* PercentageCollectionViewCell.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -252,6 +278,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */,
+				7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */,
 				7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,
