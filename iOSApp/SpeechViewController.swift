@@ -12,14 +12,14 @@ import SwiftUI
 class SpeechViewController: UIViewController {
     var swiftUISpeech = SwiftUISpeech()
     
-    @IBOutlet weak var bebasSih: UIView!
+    @IBOutlet weak var frameSpeech: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         let contentView = ContentView().environmentObject(swiftUISpeech)
         let vc = UIHostingController(rootView: contentView)
-        vc.view.frame = bebasSih.frame
+        vc.view.frame = frameSpeech.frame
         view.addSubview(vc.view)
         
         
