@@ -13,12 +13,16 @@ class AddTransactionViewController: UIViewController {
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
     @IBOutlet weak var categoryPicker: UIPickerView!
+    @IBOutlet weak var dateTextField: UITextField!
+    @IBOutlet weak var timeTextField: UITextField!
     
     var titleT: String = ""
     var priceT: Double = 0
     var categoryT: String = ""
     
-    let viewModel: DataTransactionViewModel = DataTransactionViewModel()
+    let datePicker = UIDatePicker()
+    let timePicker = UIDatePicker()
+    let formatter = DateFormatter()
     
     var pickerCategory: [String] = [String]()
     
@@ -30,18 +34,63 @@ class AddTransactionViewController: UIViewController {
         categoryPicker.dataSource = self
         
         pickerCategory = ["Needs","Wants","Savings"]
+        print(priceT)
+        priceTextField.text = String(priceT)
+        dateTextField.text = formatter.string(from: Date.now)
+        
+        createDatePicker()
+        datePicker.preferredDatePickerStyle = .wheels
+        
+        
+        createTimePicker()
+        timePicker.preferredDatePickerStyle = .wheels
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func createDatePicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneDatePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        dateTextField.inputAccessoryView = toolbar
+        
+        dateTextField.inputView = datePicker
+        datePicker.datePickerMode = .date
     }
-    */
+    
+    
+    @objc func doneDatePressed(){
+        formatter.dateStyle = .medium
+        formatter.timeStyle = .none
+        
+        dateTextField.text = formatter.string(from: datePicker.date)
+        self.view.endEditing(true)
+        
+    }
+    
+    func createTimePicker(){
+        let toolbar = UIToolbar()
+        toolbar.sizeToFit()
+        
+        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneTimePressed))
+        toolbar.setItems([doneBtn], animated: true)
+        
+        timeTextField.inputAccessoryView = toolbar
+        
+        timeTextField.inputView = timePicker
+        timePicker.datePickerMode = .time
+    }
+    
+    
+    @objc func doneTimePressed(){
+        formatter.timeStyle = .short
+        
+        
+        timeTextField.text = formatter.string(from: timePicker.date)
+        self.view.endEditing(true)
+        
+    }
     
     
     @IBAction func didSave(_ sender: Any) {
@@ -53,8 +102,6 @@ class AddTransactionViewController: UIViewController {
         print(titleT)
         print(priceT)
         print(categoryT)
-        self.viewModel.addTransaction(transTitle: titleT, transPrice: priceT, transCategory: categoryT)
-        print("saved!")
         
         let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController
         
