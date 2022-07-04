@@ -290,7 +290,6 @@
 				7E75B12D287302F90070D097 /* Transaction+CoreDataClass.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
-				7E75B155287307370070D097 /* DataTransactionViewModel.swift in Sources */,
 				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
@@ -443,7 +442,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FYVDX646G;
+				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
@@ -474,7 +473,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FYVDX646G;
+				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";

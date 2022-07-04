@@ -20,12 +20,16 @@ struct Overview {
 }
 
 class DashboardViewController: UIViewController {
+
     
     @IBOutlet weak var percentageCollectionView: UICollectionView!
     @IBOutlet weak var inputTransactionTable: UITableView!
     
     var dataInputMethod = [InputTransactionMethod]()
     var dataOverview = [Overview]()
+    
+    var colorList = [UIColor(red: (143/255), green: 0, blue: 0, alpha: 1),UIColor(red: (45/255), green: (92/255), blue: (108/255), alpha: 1),UIColor(red: (89/255), green: (28/255), blue: (102/255), alpha: 1),UIColor(red: (50/255), green: (90/255), blue: (38/255), alpha: 1)]
+
     
     func initDataInputMethod(){
         let scan = InputTransactionMethod(title: "Scan Receipt", imageName: "scanIcon")
@@ -38,10 +42,10 @@ class DashboardViewController: UIViewController {
     }
     
     func initOverview(){
-        let cashout = Overview(imageName: "calendar", title: "Total Cash Out", balance: 100000, bgColor: ".brown")
-        let needs = Overview(imageName: "calendar", title: "Needs", balance: 600000, bgColor: ".brown")
-        let wants = Overview(imageName: "calendar", title: "Wants", balance: 200000, bgColor: ".brown")
-        let savings = Overview(imageName: "calendar", title: "Savings", balance: 150000, bgColor: ".brown")
+        let cashout = Overview(imageName: "arrow.up.circle.fill", title: "Total Cash Out", balance: 100000, bgColor: ".brown")
+        let needs = Overview(imageName: "takeoutbag.and.cup.and.straw.fill", title: "Needs", balance: 600000, bgColor: ".brown")
+        let wants = Overview(imageName: "bag.fill", title: "Wants", balance: 200000, bgColor: ".brown")
+        let savings = Overview(imageName: "heart.fill", title: "Savings", balance: 150000, bgColor: ".brown")
         
         dataOverview.append(cashout)
         dataOverview.append(needs)
@@ -83,17 +87,6 @@ class DashboardViewController: UIViewController {
         initDataInputMethod()
         initOverview()
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
 
 }
 
@@ -101,7 +94,7 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource, U
     
     //collection view
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
-        return CGSize(width: 150, height: 95)
+        return CGSize(width: 150, height: 90)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -117,19 +110,17 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource, U
         
         let input = dataOverview[indexPath.row]
         cell.imgPercentage?.image = UIImage(systemName: input.imageName!)
+        cell.imgPercentage?.tintColor = .white
         cell.labelCategory.text = input.title
         cell.labelCategory.textColor = .white
         cell.labelTotalBalance.text =  "Rp. \(input.balance!)"
         cell.labelTotalBalance.textColor = .white
         
+        cell.backgroundColor = colorList[indexPath.row]
+        
         return cell
     }
     
-//    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-//        print("selected cell \(indexPath.row)")
-//
-//
-//    }
     
     //table view
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -153,8 +144,10 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource, U
         if indexPath.row == 0 {
             navigationController?.pushViewController(ScanViewController(), animated: false)
         }else if indexPath.row == 1 {
-//            speech
+            //speech
+            let displayVC : SpeechViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "speechID") as! SpeechViewController
             
+            self.navigationController?.pushViewController(displayVC, animated: false)
         }else if indexPath.row == 2 {
             //manual
             let displayVC : AddTransactionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "transactionID") as! AddTransactionViewController
@@ -164,4 +157,3 @@ extension DashboardViewController: UITableViewDelegate, UITableViewDataSource, U
     }
     
 }
-
