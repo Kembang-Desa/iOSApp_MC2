@@ -4,7 +4,7 @@
         <attribute name="hex_color" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="origin_category" inverseEntity="Transaction"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="origin_category" inverseEntity="Transaction"/>
         <uniquenessConstraints>
             <uniquenessConstraint>
                 <constraint value="name"/>

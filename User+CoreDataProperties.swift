@@ -33,6 +33,14 @@ extension User {
     public var wrappedUuid: UUID {
         uuid ?? UUID()
     }
+    
+    public var transactionArray: [Transaction] {
+        let set = transaction as? Set<Transaction> ?? []
+        
+        return set.sorted {
+            $0.wrappedName
+        }
+    }
 
 }
 

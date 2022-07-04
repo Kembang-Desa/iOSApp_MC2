@@ -24,6 +24,17 @@ extension Transaction {
     @NSManaged public var origin_category: Category?
     @NSManaged public var origin_user: User?
     
+    public var wrappedDate: Date {
+        datetime ?? Date.now
+    }
+    
+    public var wrappedTitle: String {
+        title ?? "Unknown Title"
+    }
+    
+    public var wrappedId: UUID {
+        uuid ?? UUID()
+    }
 
 }
 
