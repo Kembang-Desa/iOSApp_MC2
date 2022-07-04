@@ -11,8 +11,6 @@ class ReportViewController: UIViewController {
 
     @IBOutlet weak var transactionTable: UITableView!
     
-    let viewModel : DataTransactionViewModel = DataTransactionViewModel()
-    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -26,17 +24,6 @@ class ReportViewController: UIViewController {
         transactionTable.delegate = self
         transactionTable.dataSource = self
         
-        configViewModel()
-    }
-    override func viewWillAppear(_ animated: Bool) {
-        transactionTable.reloadData()
-    }
-    
-    func configViewModel(){
-        if viewModel.items.isEmpty{
-            transactionTable.isHidden = true
-            print("nil")
-        }
     }
 
     /*
@@ -53,15 +40,14 @@ class ReportViewController: UIViewController {
 
 extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return viewModel.items.count
+        return 2
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = transactionTable.dequeueReusableCell(withIdentifier: "transactionCell") as!TransactionTableViewCell
         
-        cell.titleLabel.text = viewModel.items[indexPath.row].transTitle
-        print(viewModel.items[indexPath.row].transTitle)
-        cell.priceLabel.text = String(viewModel.items[indexPath.row].transPrice)
+        cell.titleLabel.text = "title"
+        cell.priceLabel.text = "100000"
         
         return cell
     }

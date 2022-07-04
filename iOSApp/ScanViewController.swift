@@ -15,6 +15,8 @@ class ScanViewController: UIViewController {
 //    private var scanImageView = ScanImageView(frame: .zero)
 //    private var ocrTextView = OcrTextView(frame: .zero, textContainer: nil)
     private var ocrRequest = VNRecognizeTextRequest(completionHandler: nil)
+    var price: String = ""
+    var castingPrice: Double = 0.0
     
     
     override func viewDidLoad() {
@@ -124,13 +126,12 @@ class ScanViewController: UIViewController {
             }
             print(ocrText)
             let a = self.checkData(ocr: ocrText)
-            print(a)
-//            if
             let fullNameArr = ocrText.components(separatedBy: ":")
-            print(fullNameArr[1])
+//            print("isi \(fullNameArr[1])")
+            let newString1 = fullNameArr[1].filter("0123456789".contains)
+//            print(newString1)
             
-            
-            
+            self.price = newString1
 //            DispatchQueue.main.async {
 //                self.ocrTextView.text = ocrText
 //                self.scanButton.isEnabled = true
@@ -154,7 +155,15 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
 //        scanImageView.image = scan.imageOfPage(at: (scan.pageCount-1))
         processImage(scan.imageOfPage(at: (scan.pageCount-1)))
         //save di core data
+        castingPrice = Double(price) ?? 0.0
+        print("Total : \(price)")
+        
         //pindah ke view lain
+        let displayVC : AddTransactionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "transactionID") as! AddTransactionViewController
+        displayVC.priceT = castingPrice
+        
+        self.navigationController?.pushViewController(displayVC, animated: false)
+        
         controller.dismiss(animated: true)
     }
     
