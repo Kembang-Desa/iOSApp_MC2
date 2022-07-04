@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="IWY-ZI-Zhe">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="20037" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="aFI-tq-NtN">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -1612,6 +1612,36 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="a27-GH-JCX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1358" y="935"/>
+        </scene>
+        <!--Speech View Controller-->
+        <scene sceneID="xa1-HG-kjQ">
+            <objects>
+                <viewController id="aFI-tq-NtN" customClass="SpeechViewController" customModule="iOSApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="VZT-aH-IET">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="YDl-9u-3LU">
+                                <rect key="frame" x="0.0" y="44" width="414" height="818"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="y8d-9D-nux"/>
+                        <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        <constraints>
+                            <constraint firstItem="y8d-9D-nux" firstAttribute="trailing" secondItem="YDl-9u-3LU" secondAttribute="trailing" id="BJ0-dD-Kh2"/>
+                            <constraint firstItem="YDl-9u-3LU" firstAttribute="leading" secondItem="y8d-9D-nux" secondAttribute="leading" id="aAM-N6-dYo"/>
+                            <constraint firstItem="YDl-9u-3LU" firstAttribute="top" secondItem="y8d-9D-nux" secondAttribute="top" id="cnI-0J-M9E"/>
+                            <constraint firstItem="y8d-9D-nux" firstAttribute="bottom" secondItem="YDl-9u-3LU" secondAttribute="bottom" id="dso-iy-1Uk"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="frameSpeech" destination="YDl-9u-3LU" id="q8B-8c-uGC"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="G3U-WB-fMb" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2337.68115942029" y="928.79464285714278"/>
         </scene>
     </scenes>
     <resources>
