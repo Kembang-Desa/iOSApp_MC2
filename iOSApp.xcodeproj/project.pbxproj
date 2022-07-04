@@ -19,9 +19,6 @@
 		7E75B141287303C50070D097 /* DashboardViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B140287303C50070D097 /* DashboardViewController.swift */; };
 		7E75B144287303E80070D097 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B143287303E80070D097 /* ScanViewController.swift */; };
 		7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B146287304040070D097 /* AddTransactionViewController.swift */; };
-		7E75B14B287304290070D097 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B14A287304290070D097 /* ReportViewController.swift */; };
-		7E75B14E287304320070D097 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B14C287304320070D097 /* TransactionTableViewCell.swift */; };
-		7E75B14F287304320070D097 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E75B14D287304320070D097 /* TransactionTableViewCell.xib */; };
 		7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B1502873048B0070D097 /* SettingViewController.swift */; };
 		7E75B155287307370070D097 /* DataTransactionViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B154287307370070D097 /* DataTransactionViewModel.swift */; };
 		AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35CC962862114400CB9AA6 /* AppDelegate.swift */; };
@@ -45,9 +42,6 @@
 		7E75B140287303C50070D097 /* DashboardViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DashboardViewController.swift; sourceTree = "<group>"; };
 		7E75B143287303E80070D097 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		7E75B146287304040070D097 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
-		7E75B14A287304290070D097 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReportViewController.swift; path = ../../../Downloads/iOSApp/iOSApp/ReportViewController.swift; sourceTree = "<group>"; };
-		7E75B14C287304320070D097 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = TransactionTableViewCell.swift; path = ../../../Downloads/iOSApp/iOSApp/TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		7E75B14D287304320070D097 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; name = TransactionTableViewCell.xib; path = ../../../Downloads/iOSApp/iOSApp/TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		7E75B1502873048B0070D097 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
 		7E75B154287307370070D097 /* DataTransactionViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataTransactionViewModel.swift; sourceTree = "<group>"; };
 		7EB34EC1286EF69700CD13AE /* iOSApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSApp.xcdatamodel; sourceTree = "<group>"; };
@@ -119,24 +113,6 @@
 			name = AddTransaction;
 			sourceTree = "<group>";
 		};
-		7E75B148287304130070D097 /* Report */ = {
-			isa = PBXGroup;
-			children = (
-				7E75B14A287304290070D097 /* ReportViewController.swift */,
-				7E75B149287304170070D097 /* Cell */,
-			);
-			name = Report;
-			sourceTree = "<group>";
-		};
-		7E75B149287304170070D097 /* Cell */ = {
-			isa = PBXGroup;
-			children = (
-				7E75B14C287304320070D097 /* TransactionTableViewCell.swift */,
-				7E75B14D287304320070D097 /* TransactionTableViewCell.xib */,
-			);
-			name = Cell;
-			sourceTree = "<group>";
-		};
 		7E75B152287305130070D097 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
@@ -188,7 +164,6 @@
 			children = (
 				7E75B153287307120070D097 /* ViewModel */,
 				7E75B152287305130070D097 /* Settings */,
-				7E75B148287304130070D097 /* Report */,
 				7E75B145287303F20070D097 /* AddTransaction */,
 				7E75B136287303A50070D097 /* Dashboard */,
 				7E75B12F287303220070D097 /* Model */,
@@ -265,7 +240,6 @@
 				AC35CCA32862114500CB9AA6 /* LaunchScreen.storyboard in Resources */,
 				AC35CCA02862114500CB9AA6 /* Assets.xcassets in Resources */,
 				AC35CC9E2862114400CB9AA6 /* Main.storyboard in Resources */,
-				7E75B14F287304320070D097 /* TransactionTableViewCell.xib in Resources */,
 				7E75B13F287303BF0070D097 /* InputTableViewCell.xib in Resources */,
 				7E75B13E287303BF0070D097 /* PercentageCollectionViewCell.xib in Resources */,
 			);
@@ -278,8 +252,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E75B14B287304290070D097 /* ReportViewController.swift in Sources */,
-				7E75B14E287304320070D097 /* TransactionTableViewCell.swift in Sources */,
 				7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,
