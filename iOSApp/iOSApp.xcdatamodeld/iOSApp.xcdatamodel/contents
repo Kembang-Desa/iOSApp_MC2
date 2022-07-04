@@ -1,27 +1,45 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="20086" systemVersion="21F79" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
-    <entity name="Category" representedClassName="Category" syncable="YES" codeGenerationType="class">
+    <entity name="Category" representedClassName="Category" syncable="YES">
         <attribute name="hex_color" optional="YES" attributeType="Float" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="limit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
-        <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="transaction" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Transaction" inverseName="origin_category" inverseEntity="Transaction"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="name"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
-    <entity name="Transaction" representedClassName="Transaction" syncable="YES" codeGenerationType="class">
+    <entity name="Transaction" representedClassName="Transaction" syncable="YES">
         <attribute name="current_limit" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="datetime" optional="YES" attributeType="Date" usesScalarValueType="NO"/>
         <attribute name="price" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="title" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="origin_category" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="Category" inverseName="transaction" inverseEntity="Category"/>
+        <relationship name="origin_user" optional="YES" maxCount="1" deletionRule="Nullify" destinationEntity="User" inverseName="transaction" inverseEntity="User"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="uuid"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <entity name="User" representedClassName="User" syncable="YES">
         <attribute name="avatar" optional="YES" attributeType="String"/>
         <attribute name="income" optional="YES" attributeType="Double" defaultValueString="0.0" usesScalarValueType="YES"/>
         <attribute name="name" optional="YES" attributeType="String"/>
         <attribute name="uuid" optional="YES" attributeType="UUID" usesScalarValueType="NO"/>
+        <relationship name="transaction" optional="YES" toMany="YES" deletionRule="Nullify" destinationEntity="Transaction" inverseName="origin_user" inverseEntity="Transaction"/>
+        <uniquenessConstraints>
+            <uniquenessConstraint>
+                <constraint value="uuid"/>
+            </uniquenessConstraint>
+        </uniquenessConstraints>
     </entity>
     <elements>
-        <element name="User" positionX="-63" positionY="-18" width="128" height="89"/>
-        <element name="Transaction" positionX="-54" positionY="18" width="128" height="104"/>
         <element name="Category" positionX="-27" positionY="63" width="128" height="89"/>
+        <element name="Transaction" positionX="-54" positionY="18" width="128" height="134"/>
+        <element name="User" positionX="-63" positionY="-18" width="128" height="104"/>
     </elements>
 </model>

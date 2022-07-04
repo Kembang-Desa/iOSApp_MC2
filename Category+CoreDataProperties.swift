@@ -2,7 +2,7 @@
 //  Category+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 04/07/22.
+//  Created by Rivaldo Fernandes on 04/07/22.
 //
 //
 
@@ -19,7 +19,9 @@ extension Category {
     @NSManaged public var hex_color: Float
     @NSManaged public var limit: Double
     @NSManaged public var name: String?
-    @NSManaged public var uuid: UUID?
+    @NSManaged public var transaction: Transaction?
+    
+    
 
 }
 

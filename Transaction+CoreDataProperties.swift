@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 04/07/22.
+//  Created by Rivaldo Fernandes on 04/07/22.
 //
 //
 
@@ -21,6 +21,9 @@ extension Transaction {
     @NSManaged public var price: Double
     @NSManaged public var title: String?
     @NSManaged public var uuid: UUID?
+    @NSManaged public var origin_category: Category?
+    @NSManaged public var origin_user: User?
+    
 
 }
 
