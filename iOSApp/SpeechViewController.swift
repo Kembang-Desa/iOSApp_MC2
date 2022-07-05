@@ -17,6 +17,10 @@ class SpeechViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
+        self.tabBarController?.tabBar.isHidden = true
+
+        
         let contentView = ContentView().environmentObject(swiftUISpeech)
         let vc = UIHostingController(rootView: contentView)
         vc.view.frame = frameSpeech.frame

@@ -19,6 +19,7 @@ class ReportViewController: UIViewController {
         // Do any additional setup after loading the view.
         
         self.navigationItem.setHidesBackButton(true, animated: true)
+        self.navigationItem.largeTitleDisplayMode = .automatic
         self.navigationController?.navigationBar.prefersLargeTitles = true
         
         transactionTable.delegate = self
@@ -46,7 +47,13 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = transactionTable.dequeueReusableCell(withIdentifier: "transactionCell") as!TransactionTableViewCell
         
-        cell.titleLabel.text = "title"
+        cell.titleLabel.text = "Items"
+        
+        let formatter = DateFormatter()
+        let datePicker = UIDatePicker()
+        formatter.dateStyle = .medium
+        cell.dateTimeLabel.text = formatter.string(from: datePicker.date)
+        
         cell.priceLabel.text = "100000"
         
         return cell

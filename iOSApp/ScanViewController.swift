@@ -17,6 +17,7 @@ class ScanViewController: UIViewController {
     private var ocrRequest = VNRecognizeTextRequest(completionHandler: nil)
     var price: String = ""
     var castingPrice: Double = 0.0
+    var scanImage = UIImage()
     
     
     override func viewDidLoad() {
@@ -125,17 +126,19 @@ class ScanViewController: UIViewController {
                 }
             }
             print(ocrText)
-            let a = self.checkData(ocr: ocrText)
-            let fullNameArr = ocrText.components(separatedBy: ":")
-//            print("isi \(fullNameArr[1])")
-            let newString1 = fullNameArr[1].filter("0123456789".contains)
-//            print(newString1)
-            
-            self.price = newString1
-//            DispatchQueue.main.async {
-//                self.ocrTextView.text = ocrText
-//                self.scanButton.isEnabled = true
-//            }
+            if ocrText.isEmpty{
+                ocrText = "TOTAL:0"
+            }else{
+                let a = self.checkData(ocr: ocrText)
+                let fullNameArr = ocrText.components(separatedBy: ":")
+                let newString1 = fullNameArr[1].filter("0123456789".contains)
+                
+                self.price = newString1
+    //            DispatchQueue.main.async {
+    //                self.ocrTextView.text = ocrText
+    //                self.scanButton.isEnabled = true
+    //            }
+            }
         }
         
         ocrRequest.recognitionLevel = .accurate
@@ -152,7 +155,7 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
             return
         }
         
-//        scanImageView.image = scan.imageOfPage(at: (scan.pageCount-1))
+        scanImage = scan.imageOfPage(at: (scan.pageCount-1))
         processImage(scan.imageOfPage(at: (scan.pageCount-1)))
         //save di core data
         castingPrice = Double(price) ?? 0.0
@@ -161,6 +164,7 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
         //pindah ke view lain
         let displayVC : AddTransactionViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "transactionID") as! AddTransactionViewController
         displayVC.priceT = castingPrice
+        displayVC.imageT = scanImage
         
         self.navigationController?.pushViewController(displayVC, animated: false)
         

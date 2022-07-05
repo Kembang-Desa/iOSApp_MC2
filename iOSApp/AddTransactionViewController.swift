@@ -8,7 +8,7 @@
 import UIKit
 
 class AddTransactionViewController: UIViewController {
-
+    
     @IBOutlet weak var receiptImage: UIImageView!
     @IBOutlet weak var titleTextField: UITextField!
     @IBOutlet weak var priceTextField: UITextField!
@@ -19,31 +19,69 @@ class AddTransactionViewController: UIViewController {
     var titleT: String = ""
     var priceT: Double = 0
     var categoryT: String = ""
+    var imageT = UIImage()
     
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
     let formatter = DateFormatter()
+    let formatter1 = DateFormatter()
     
     var pickerCategory: [String] = [String]()
     
+    let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        
+        let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
+        view.addGestureRecognizer(tap)
+        
+        self.tabBarController?.tabBar.isHidden = true
+        
         // Do any additional setup after loading the view.
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
         
+        if imageIsNullOrNot(imageName: imageT){
+            receiptImage.image = imageT
+        }else{
+            receiptImage.image = UIImage(systemName: "list.bullet.rectangle.portrait.fill")
+        }
+        
         pickerCategory = ["Needs","Wants","Savings"]
-        print(priceT)
         priceTextField.text = String(priceT)
-        dateTextField.text = formatter.string(from: Date.now)
+        
+        if dateTextField.text!.isEmpty && timeTextField.text!.isEmpty{
+            formatter.dateStyle = .medium
+            dateTextField.text = formatter.string(from: datePicker.date)
+            
+            formatter1.timeStyle = .short
+            timeTextField.text = formatter1.string(from: timePicker.date)
+        }
         
         createDatePicker()
         datePicker.preferredDatePickerStyle = .wheels
-        
-        
         createTimePicker()
         timePicker.preferredDatePickerStyle = .wheels
+    }
+    
+    @objc func dismissKeyboard() {
+        //Causes the view (or one of its embedded text fields) to resign the first responder status.
+        view.endEditing(true)
+    }
+    
+    func imageIsNullOrNot(imageName : UIImage)-> Bool
+    {
+        
+        let size = CGSize(width: 0, height: 0)
+        if (imageName.size.width == size.width)
+        {
+            return false
+        }
+        else
+        {
+            return true
+        }
     }
     
     func createDatePicker(){
@@ -84,10 +122,9 @@ class AddTransactionViewController: UIViewController {
     
     
     @objc func doneTimePressed(){
-        formatter.timeStyle = .short
+        formatter1.timeStyle = .short
         
-        
-        timeTextField.text = formatter.string(from: timePicker.date)
+        timeTextField.text = formatter1.string(from: timePicker.date)
         self.view.endEditing(true)
         
     }
@@ -103,9 +140,17 @@ class AddTransactionViewController: UIViewController {
         print(priceT)
         print(categoryT)
         
-        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController
+        //        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController
+        //
+        //        self.navigationController?.pushViewController(displayVC, animated: false)
         
-        self.navigationController?.pushViewController(displayVC, animated: false)
+        let alert = UIAlertController(title: "Success", message: "Successfully saved Transaction", preferredStyle: UIAlertController.Style.alert)
+        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
+        self.present(alert, animated: true, completion: nil)
+        
+        self.tabBarController?.selectedIndex = 1
+        self.tabBarController?.tabBar.isHidden = false
+        self.navigationController?.popToRootViewController(animated: false)
     }
     
 }
@@ -128,3 +173,10 @@ extension AddTransactionViewController: UIPickerViewDelegate, UIPickerViewDataSo
         categoryT = pickerCategory[row]
     }
 }
+
+//extension AddTransactionViewController: UITabBarDelegate{
+//
+//    func tabBarController(_ tabBarController: UITabBarController, didSelect viewController: UIViewController) {
+//        self.navigationController?.popToRootViewController(animated: false)
+//    }
+//}
