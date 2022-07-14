@@ -97,20 +97,6 @@ class DashboardViewController: UIViewController {
         transaction4.type = "Image"
         transaction4.path_data = "path data"
         
-        
-//        let budget1 = Budget(context: context)
-//        budget1.name = "Needs"
-//        budget1.max_limit = 500000
-        
-//        budgets[0].transactions = transaction1
-//        budgets[0].transactions = transaction2
-//        budgets[0].transactions = transaction3
-//        budgets[0].transactions = transaction4
-//        transaction1.budget = budget
-//        transaction2.budget = budget
-//        transaction3.budget = budget
-//        transaction4.budget = budget
-        
 
         var transactions: [Transaction] = []
         transactions.append(transaction1)
@@ -122,11 +108,6 @@ class DashboardViewController: UIViewController {
         budget.addToTransactions(transaction2)
         budget.addToTransactions(transaction3)
         budget.addToTransactions(transaction4)
-//
-//                transaction1.budget = budget1
-//                transaction2.budget = budget1
-//                transaction3.budget = budget1
-//                transaction4.budget = budget1
         
         if(context.hasChanges){
             do {
@@ -245,12 +226,12 @@ class DashboardViewController: UIViewController {
         percentageCollectionView.register(nib1, forCellWithReuseIdentifier: "percentageCollectionViewCell")
         // Do any additional setup after loading the view.
         
-//        saveUser()
+        saveUser()
 //        fetchUser()
-//        saveBudget()
-        fetchBudget()
-        saveTransactions()
-        fetchTransactions()
+        saveBudget()
+//        fetchBudget()
+//        saveTransactions()
+//        fetchTransactions()
          
 //        let layout = UICollectionViewFlowLayout()
 //        layout.itemSize = CGSize(width: view.frame.size.width/3, height: view.frame.size.height/3)
