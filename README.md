@@ -83,7 +83,7 @@ Clone repository using git
 
 Installation steps
 
-1. Download and setup your android studio from [Android Studio](https://developer.android.com/studio)
+1. Download and setup your XCode from [XCode](https://developer.apple.com/xcode/)
 2. Load the project and build
 
 <p align="right">(<a href="#top">back to top</a>)</p>
