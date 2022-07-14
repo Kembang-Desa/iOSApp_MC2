@@ -2,7 +2,7 @@
 //  User+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Rivaldo Fernandes on 01/07/22.
+//  Created by Rivaldo Fernandes on 14/07/22.
 //
 //
 
@@ -16,10 +16,9 @@ extension User {
         return NSFetchRequest<User>(entityName: "User")
     }
 
-    @NSManaged public var uuid: UUID?
     @NSManaged public var name: String?
-    @NSManaged public var avatar: String?
     @NSManaged public var income: Double
+    @NSManaged public var avatar: String?
 
 }
 

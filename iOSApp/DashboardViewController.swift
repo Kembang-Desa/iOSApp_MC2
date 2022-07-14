@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 struct InputTransactionMethod {
     var title: String?
@@ -30,6 +31,185 @@ class DashboardViewController: UIViewController {
     
     var colorList = [UIColor(red: (143/255), green: 0, blue: 0, alpha: 1),UIColor(red: (45/255), green: (92/255), blue: (108/255), alpha: 1),UIColor(red: (89/255), green: (28/255), blue: (102/255), alpha: 1),UIColor(red: (50/255), green: (90/255), blue: (38/255), alpha: 1)]
 
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
+    
+    
+    func loadAllTransactions(budget: Budget) -> [Transaction] {
+        let request: NSFetchRequest<Transaction> = Transaction.fetchRequest()
+        request.predicate = NSPredicate(format: "(price > 0) AND (budget = %@)", budget)
+        request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
+        
+        var fetched: [Transaction] = []
+        
+        do {
+            fetched = try context.fetch(request)
+        }catch{
+            print("error fetching transactions")
+        }
+        
+        return fetched
+    }
+    
+    
+    func saveTransactions(){
+        var budgets: [Budget] = []
+        
+        do {
+            budgets = try context.fetch(Budget.fetchRequest())
+            print(budgets)
+        }catch{
+            print("Error while fetch budgets")
+        }
+        
+        print("load single budgets \(budgets[0])")
+        
+        let budget = budgets[0]
+        
+        let transaction1 = Transaction(context: context)
+        transaction1.uuid = UUID()
+        transaction1.timestamp = Date.now
+        transaction1.name = "Beli Bakso"
+        transaction1.price = 1000000.0
+        transaction1.type = "Image"
+        transaction1.path_data = "path data"
+
+        let transaction2 = Transaction(context: context)
+        transaction2.uuid = UUID()
+        transaction2.timestamp = Date.now
+        transaction2.name = "Beli Bakso"
+        transaction2.price = 1000000.0
+        transaction2.type = "Image"
+        transaction2.path_data = "path data"
+
+        let transaction3 = Transaction(context: context)
+        transaction3.uuid = UUID()
+        transaction3.timestamp = Date.now
+        transaction3.name = "Beli Bakso"
+        transaction3.price = 1000000.0
+        transaction3.type = "Image"
+        transaction3.path_data = "path data"
+
+        let transaction4 = Transaction(context: context)
+        transaction4.uuid = UUID()
+        transaction4.timestamp = Date.now
+        transaction4.name = "Beli Bakso"
+        transaction4.price = 1000000.0
+        transaction4.type = "Image"
+        transaction4.path_data = "path data"
+        
+        
+//        let budget1 = Budget(context: context)
+//        budget1.name = "Needs"
+//        budget1.max_limit = 500000
+        
+//        budgets[0].transactions = transaction1
+//        budgets[0].transactions = transaction2
+//        budgets[0].transactions = transaction3
+//        budgets[0].transactions = transaction4
+//        transaction1.budget = budget
+//        transaction2.budget = budget
+//        transaction3.budget = budget
+//        transaction4.budget = budget
+        
+
+        var transactions: [Transaction] = []
+        transactions.append(transaction1)
+        transactions.append(transaction2)
+        transactions.append(transaction3)
+        transactions.append(transaction4)
+        
+        budget.addToTransactions(transaction1)
+        budget.addToTransactions(transaction2)
+        budget.addToTransactions(transaction3)
+        budget.addToTransactions(transaction4)
+//
+//                transaction1.budget = budget1
+//                transaction2.budget = budget1
+//                transaction3.budget = budget1
+//                transaction4.budget = budget1
+        
+        if(context.hasChanges){
+            do {
+                try context.save()
+                print("transaction saving.....")
+            }catch{
+                print("error while saving transactions \(error)")
+            }
+        }else{
+            print("context not changes")
+        }
+    }
+    
+    func fetchTransactions(){
+        var transactions: [Transaction] = []
+        
+        do {
+            transactions = try context.fetch(Transaction.fetchRequest())
+            print("load all \(transactions)")
+            print("size data \(transactions.count)")
+            
+        }catch{
+            print("Error while fetch transactions")
+        }
+    }
+    
+    
+    func saveUser(){
+        let user = User(context: context)
+        user.income = 1000000.0
+        user.avatar = "ini avatar"
+        user.name = "John Doe"
+        
+        do {
+            try context.save()
+        }catch{
+            print("error while saving data")
+        }
+    }
+    
+    func saveBudget(){
+        let budget1 = Budget(context: context)
+        budget1.name = "Needs"
+        budget1.max_limit = 500000
+        
+        let budget2 = Budget(context: context)
+        budget2.name = "Wants"
+        budget2.max_limit = 600000
+        
+        let budget3 = Budget(context: context)
+        budget3.name = "Savings"
+        budget3.max_limit = 700000
+        
+        
+        do {
+            try context.save()
+        }catch{
+            print("error while saving budget")
+        }
+    }
+    
+    func fetchBudget(){
+        var budgets: [Budget] = []
+        
+        do {
+            budgets = try context.fetch(Budget.fetchRequest())
+            print("load all budgets \(budgets)")
+        }catch{
+            print("Error while fetch budgets")
+        }
+    }
+    
+    func fetchUser(){
+        var users: [User] = []
+        
+        do {
+            users = try context.fetch(User.fetchRequest())
+            print(users)
+        }catch{
+            print("error while fetch users")
+        }
+    }
+    
     
     func initDataInputMethod(){
         let scan = InputTransactionMethod(title: "Scan Receipt", imageName: "scanIcon")
@@ -65,6 +245,12 @@ class DashboardViewController: UIViewController {
         percentageCollectionView.register(nib1, forCellWithReuseIdentifier: "percentageCollectionViewCell")
         // Do any additional setup after loading the view.
         
+//        saveUser()
+//        fetchUser()
+//        saveBudget()
+        fetchBudget()
+        saveTransactions()
+        fetchTransactions()
          
 //        let layout = UICollectionViewFlowLayout()
 //        layout.itemSize = CGSize(width: view.frame.size.width/3, height: view.frame.size.height/3)

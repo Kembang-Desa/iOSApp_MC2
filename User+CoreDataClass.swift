@@ -2,7 +2,7 @@
 //  User+CoreDataClass.swift
 //  iOSApp
 //
-//  Created by Rivaldo Fernandes on 01/07/22.
+//  Created by Rivaldo Fernandes on 14/07/22.
 //
 //
 
