@@ -219,6 +219,7 @@ class DashboardViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        
         let nib = UINib(nibName: "InputTableViewCell", bundle: nil)
         inputTransactionTable.register(nib, forCellReuseIdentifier: "inputCell")
         

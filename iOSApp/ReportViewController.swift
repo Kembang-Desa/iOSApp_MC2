@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import CoreData
 
 class ReportViewController: UIViewController {
 
@@ -33,15 +34,38 @@ class ReportViewController: UIViewController {
         
     }
     
+    func getBudget(category: String) -> Budget?{
+        var budgets: [Budget] = []
+
+        do {
+            budgets = try context.fetch(Budget.fetchRequest())
+        }catch{
+            print("Error while fetch budgets")
+        }
+        
+        for budget in budgets{
+            if(budget.name == category){
+                return budget
+            }
+        }
+        return nil
+    }
+    
     func fetchTransactions(){
         
-        do {
-            transactions = try context.fetch(Transaction.fetchRequest())
+        if let budget = getBudget(category: "Needs"){
             
+            let request: NSFetchRequest<Transaction> = Transaction.fetchRequest()
+            request.predicate = NSPredicate(format: "(price > 0) AND (budget = %@)", budget)
+            request.sortDescriptors = [NSSortDescriptor(key: "timestamp", ascending: false)]
             
-        }catch{
-            print("Error while fetch transactions")
+            do {
+                transactions = try context.fetch(request)
+            }catch{
+                print("Error while fetch transactions")
+            }
         }
+        
     }
 
     /*

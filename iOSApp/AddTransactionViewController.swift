@@ -18,7 +18,7 @@ class AddTransactionViewController: UIViewController {
     
     var titleT: String = ""
     var priceT: Double = 0
-    var categoryT: String = ""
+    var categoryT: String = "Needs"
     var imageT = UIImage()
     
     let datePicker = UIDatePicker()
@@ -35,6 +35,8 @@ class AddTransactionViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("ini nilai categoryT \(categoryT)")
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -186,7 +188,7 @@ class AddTransactionViewController: UIViewController {
         transaction.price = price
         transaction.type = type
         transaction.path_data = path_data
-
+        
         budget.addToTransactions(transaction)
 
         if(context.hasChanges){
