@@ -2,7 +2,7 @@
 //  Transaction+CoreDataClass.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 04/07/22.
+//  Created by Rivaldo Fernandes on 14/07/22.
 //
 //
 

@@ -18,7 +18,7 @@ class AddTransactionViewController: UIViewController {
     
     var titleT: String = ""
     var priceT: Double = 0
-    var categoryT: String = ""
+    var categoryT: String = "Needs"
     var imageT = UIImage()
     
     let datePicker = UIDatePicker()
@@ -26,12 +26,17 @@ class AddTransactionViewController: UIViewController {
     let formatter = DateFormatter()
     let formatter1 = DateFormatter()
     
+    var budget: Budget?
+    
     var pickerCategory: [String] = [String]()
     
     let appDelegate = UIApplication.shared.delegate! as! AppDelegate
+    let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        print("ini nilai categoryT \(categoryT)")
         
         let tap = UITapGestureRecognizer(target: self, action: #selector(UIInputViewController.dismissKeyboard))
         view.addGestureRecognizer(tap)
@@ -129,6 +134,23 @@ class AddTransactionViewController: UIViewController {
         
     }
     
+    func getBudget() -> Budget?{
+        var budgets: [Budget] = []
+
+        do {
+            budgets = try context.fetch(Budget.fetchRequest())
+        }catch{
+            print("Error while fetch budgets")
+        }
+        
+        for budget in budgets{
+            if(budget.name == categoryT){
+                return budget
+            }
+        }
+        return nil
+    }
+    
     
     @IBAction func didSave(_ sender: Any) {
         //append data
@@ -139,6 +161,10 @@ class AddTransactionViewController: UIViewController {
         print(titleT)
         print(priceT)
         print(categoryT)
+        
+        if let budget = getBudget() {
+            saveTransactions(budget: budget, timestamp: Date.now, name: titleT, price: priceT, type: "Hello", path_data: "Hello")
+        }
         
         //        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController
         //
@@ -151,6 +177,30 @@ class AddTransactionViewController: UIViewController {
         self.tabBarController?.selectedIndex = 1
         self.tabBarController?.tabBar.isHidden = false
         self.navigationController?.popToRootViewController(animated: false)
+    }
+    
+    func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String, path_data: String){
+
+        let transaction = Transaction(context: context)
+        transaction.uuid = UUID()
+        transaction.timestamp = timestamp
+        transaction.name = name
+        transaction.price = price
+        transaction.type = type
+        transaction.path_data = path_data
+        
+        budget.addToTransactions(transaction)
+
+        if(context.hasChanges){
+            do {
+                try context.save()
+                print("transaction saving.....")
+            }catch{
+                print("error while saving transactions \(error)")
+            }
+        }else{
+            print("context not changes")
+        }
     }
     
 }

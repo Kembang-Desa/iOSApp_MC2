@@ -14,10 +14,6 @@
 		7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884728730E2300FF7825 /* ReportViewController.swift */; };
 		7E14884B28730E3600FF7825 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */; };
 		7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */; };
-		7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B127287302F90070D097 /* Transaction+CoreDataProperties.swift */; };
-		7E75B12C287302F90070D097 /* Category+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B128287302F90070D097 /* Category+CoreDataClass.swift */; };
-		7E75B12D287302F90070D097 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B129287302F90070D097 /* Transaction+CoreDataClass.swift */; };
-		7E75B12E287302F90070D097 /* Category+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B12A287302F90070D097 /* Category+CoreDataProperties.swift */; };
 		7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B138287303BE0070D097 /* InputTableViewCell.swift */; };
 		7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B139287303BE0070D097 /* PercentageCollectionViewCell.swift */; };
 		7E75B13E287303BF0070D097 /* PercentageCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E75B13A287303BF0070D097 /* PercentageCollectionViewCell.xib */; };
@@ -26,6 +22,13 @@
 		7E75B144287303E80070D097 /* ScanViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B143287303E80070D097 /* ScanViewController.swift */; };
 		7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B146287304040070D097 /* AddTransactionViewController.swift */; };
 		7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E75B1502873048B0070D097 /* SettingViewController.swift */; };
+		7ECF72E928805F0F007D0B08 /* iOSApp.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72E728805F0F007D0B08 /* iOSApp.xcdatamodeld */; };
+		7ECF7300288071BF007D0B08 /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FA288071BF007D0B08 /* Budget+CoreDataClass.swift */; };
+		7ECF7301288071BF007D0B08 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FB288071BF007D0B08 /* Budget+CoreDataProperties.swift */; };
+		7ECF7302288071BF007D0B08 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FC288071BF007D0B08 /* Transaction+CoreDataClass.swift */; };
+		7ECF7303288071BF007D0B08 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FD288071BF007D0B08 /* Transaction+CoreDataProperties.swift */; };
+		7ECF7304288071BF007D0B08 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FE288071BF007D0B08 /* User+CoreDataClass.swift */; };
+		7ECF7305288071BF007D0B08 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7ECF72FF288071BF007D0B08 /* User+CoreDataProperties.swift */; };
 		AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35CC962862114400CB9AA6 /* AppDelegate.swift */; };
 		AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35CC982862114400CB9AA6 /* SceneDelegate.swift */; };
 		AC35CC9B2862114400CB9AA6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = AC35CC9A2862114400CB9AA6 /* ViewController.swift */; };
@@ -42,10 +45,6 @@
 		7E14884728730E2300FF7825 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
-		7E75B127287302F90070D097 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = "<group>"; };
-		7E75B128287302F90070D097 /* Category+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7E75B129287302F90070D097 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7E75B12A287302F90070D097 /* Category+CoreDataProperties.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Category+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		7E75B138287303BE0070D097 /* InputTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = InputTableViewCell.swift; sourceTree = "<group>"; };
 		7E75B139287303BE0070D097 /* PercentageCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PercentageCollectionViewCell.swift; sourceTree = "<group>"; };
 		7E75B13A287303BF0070D097 /* PercentageCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = PercentageCollectionViewCell.xib; sourceTree = "<group>"; };
@@ -54,9 +53,13 @@
 		7E75B143287303E80070D097 /* ScanViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ScanViewController.swift; sourceTree = "<group>"; };
 		7E75B146287304040070D097 /* AddTransactionViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddTransactionViewController.swift; sourceTree = "<group>"; };
 		7E75B1502873048B0070D097 /* SettingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SettingViewController.swift; sourceTree = "<group>"; };
-		7EB34EC1286EF69700CD13AE /* iOSApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSApp.xcdatamodel; sourceTree = "<group>"; };
-		7EB34EC4286EF7CC00CD13AE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = "<group>"; };
-		7EB34EC5286EF7CC00CD13AE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		7ECF72E828805F0F007D0B08 /* iOSApp.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = iOSApp.xcdatamodel; sourceTree = "<group>"; };
+		7ECF72FA288071BF007D0B08 /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7ECF72FB288071BF007D0B08 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7ECF72FC288071BF007D0B08 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7ECF72FD288071BF007D0B08 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		7ECF72FE288071BF007D0B08 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		7ECF72FF288071BF007D0B08 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		AC35CC932862114400CB9AA6 /* iOSApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = iOSApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC35CC962862114400CB9AA6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		AC35CC982862114400CB9AA6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -152,18 +155,18 @@
 			name = Settings;
 			sourceTree = "<group>";
 		};
-		7EB34EC3286EF6A300CD13AE /* Model Core Date */ = {
+		7ECF72E628805E6A007D0B08 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				7E75B128287302F90070D097 /* Category+CoreDataClass.swift */,
-				7E75B12A287302F90070D097 /* Category+CoreDataProperties.swift */,
-				7E75B129287302F90070D097 /* Transaction+CoreDataClass.swift */,
-				7E75B127287302F90070D097 /* Transaction+CoreDataProperties.swift */,
-				7EB34EC4286EF7CC00CD13AE /* User+CoreDataClass.swift */,
-				7EB34EC5286EF7CC00CD13AE /* User+CoreDataProperties.swift */,
-				7EB34EC0286EF69700CD13AE /* iOSApp.xcdatamodeld */,
+				7ECF72FA288071BF007D0B08 /* Budget+CoreDataClass.swift */,
+				7ECF72FB288071BF007D0B08 /* Budget+CoreDataProperties.swift */,
+				7ECF72FC288071BF007D0B08 /* Transaction+CoreDataClass.swift */,
+				7ECF72FD288071BF007D0B08 /* Transaction+CoreDataProperties.swift */,
+				7ECF72FE288071BF007D0B08 /* User+CoreDataClass.swift */,
+				7ECF72FF288071BF007D0B08 /* User+CoreDataProperties.swift */,
+				7ECF72E728805F0F007D0B08 /* iOSApp.xcdatamodeld */,
 			);
-			name = "Model Core Date";
+			name = CoreData;
 			sourceTree = "<group>";
 		};
 		AC35CC8A2862114400CB9AA6 = {
@@ -185,12 +188,12 @@
 		AC35CC952862114400CB9AA6 /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				7ECF72E628805E6A007D0B08 /* CoreData */,
 				66545BDC28732DFA00183F3C /* Speech */,
 				7E14884528730DF800FF7825 /* Report */,
 				7E75B152287305130070D097 /* Settings */,
 				7E75B145287303F20070D097 /* AddTransaction */,
 				7E75B136287303A50070D097 /* Dashboard */,
-				7EB34EC3286EF6A300CD13AE /* Model Core Date */,
 				AC35CC962862114400CB9AA6 /* AppDelegate.swift */,
 				AC35CC982862114400CB9AA6 /* SceneDelegate.swift */,
 				AC35CC9A2862114400CB9AA6 /* ViewController.swift */,
@@ -276,25 +279,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7ECF7303288071BF007D0B08 /* Transaction+CoreDataProperties.swift in Sources */,
 				7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */,
 				7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */,
-				7E75B12B287302F90070D097 /* Transaction+CoreDataProperties.swift in Sources */,
 				66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,
+				7ECF7300288071BF007D0B08 /* Budget+CoreDataClass.swift in Sources */,
 				7E75B141287303C50070D097 /* DashboardViewController.swift in Sources */,
 				66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */,
-				7E75B12E287302F90070D097 /* Category+CoreDataProperties.swift in Sources */,
-				7E75B12C287302F90070D097 /* Category+CoreDataClass.swift in Sources */,
+				7ECF72E928805F0F007D0B08 /* iOSApp.xcdatamodeld in Sources */,
+				7ECF7302288071BF007D0B08 /* Transaction+CoreDataClass.swift in Sources */,
 				AC35CC9B2862114400CB9AA6 /* ViewController.swift in Sources */,
-				7E75B12D287302F90070D097 /* Transaction+CoreDataClass.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
+				7ECF7301288071BF007D0B08 /* Budget+CoreDataProperties.swift in Sources */,
 				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
+				7ECF7305288071BF007D0B08 /* User+CoreDataProperties.swift in Sources */,
 				7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */,
 				66545BEC28733BAB00183F3C /* ContentView.swift in Sources */,
+				7ECF7304288071BF007D0B08 /* User+CoreDataClass.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -442,7 +448,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C8VS35NTZ7;
+				DEVELOPMENT_TEAM = 3F8C4P2T95;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
@@ -473,7 +479,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = C8VS35NTZ7;
+				DEVELOPMENT_TEAM = 3F8C4P2T95;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
@@ -520,12 +526,12 @@
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		7EB34EC0286EF69700CD13AE /* iOSApp.xcdatamodeld */ = {
+		7ECF72E728805F0F007D0B08 /* iOSApp.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				7EB34EC1286EF69700CD13AE /* iOSApp.xcdatamodel */,
+				7ECF72E828805F0F007D0B08 /* iOSApp.xcdatamodel */,
 			);
-			currentVersion = 7EB34EC1286EF69700CD13AE /* iOSApp.xcdatamodel */;
+			currentVersion = 7ECF72E828805F0F007D0B08 /* iOSApp.xcdatamodel */;
 			path = iOSApp.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 04/07/22.
+//  Created by Rivaldo Fernandes on 14/07/22.
 //
 //
 
@@ -16,11 +16,13 @@ extension Transaction {
         return NSFetchRequest<Transaction>(entityName: "Transaction")
     }
 
-    @NSManaged public var current_limit: Double
-    @NSManaged public var datetime: Date?
+    @NSManaged public var name: String?
     @NSManaged public var price: Double
-    @NSManaged public var title: String?
+    @NSManaged public var timestamp: Date?
     @NSManaged public var uuid: UUID?
+    @NSManaged public var path_data: String?
+    @NSManaged public var type: String?
+    @NSManaged public var budget: Budget?
 
 }
 
