@@ -20,6 +20,7 @@ class AddTransactionViewController: UIViewController {
     var priceT: Double = 0
     var categoryT: String = "Needs"
     var imageT = UIImage()
+    // add variable type, if image view is image, if speech maka diisi speech
     
     let datePicker = UIDatePicker()
     let timePicker = UIDatePicker()
@@ -73,6 +74,10 @@ class AddTransactionViewController: UIViewController {
     @objc func dismissKeyboard() {
         //Causes the view (or one of its embedded text fields) to resign the first responder status.
         view.endEditing(true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
     }
     
     func imageIsNullOrNot(imageName : UIImage)-> Bool
@@ -171,12 +176,14 @@ class AddTransactionViewController: UIViewController {
         //        self.navigationController?.pushViewController(displayVC, animated: false)
         
         let alert = UIAlertController(title: "Success", message: "Successfully saved Transaction", preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(UIAlertAction(title: "OK", style: UIAlertAction.Style.default, handler: nil))
-        self.present(alert, animated: true, completion: nil)
         
-        self.tabBarController?.selectedIndex = 1
-        self.tabBarController?.tabBar.isHidden = false
-        self.navigationController?.popToRootViewController(animated: false)
+        let okActionButton = UIAlertAction(title: "OK", style: UIAlertAction.Style.default) { _ in
+            self.tabBarController?.selectedIndex = 1
+            self.tabBarController?.tabBar.isHidden = false
+            self.navigationController?.popToRootViewController(animated: false)
+        }
+        alert.addAction(okActionButton)
+        self.present(alert, animated: true, completion: nil)
     }
     
     func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String, path_data: String){
