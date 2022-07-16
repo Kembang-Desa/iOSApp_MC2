@@ -460,7 +460,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3F8C4P2T95;
+				DEVELOPMENT_TEAM = 8FYVDX646G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
@@ -491,7 +491,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 3F8C4P2T95;
+				DEVELOPMENT_TEAM = 8FYVDX646G;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
 				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
