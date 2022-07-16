@@ -129,7 +129,7 @@ class ScanViewController: UIViewController {
             if ocrText.isEmpty{
                 ocrText = "TOTAL:0"
             }else{
-                let a = self.checkData(ocr: ocrText)
+                _ = self.checkData(ocr: ocrText)
                 let fullNameArr = ocrText.components(separatedBy: ":")
                 let newString1 = fullNameArr[1].filter("0123456789".contains)
                 
@@ -157,7 +157,7 @@ extension ScanViewController: VNDocumentCameraViewControllerDelegate {
         
         scanImage = scan.imageOfPage(at: (scan.pageCount-1))
         processImage(scan.imageOfPage(at: (scan.pageCount-1)))
-        //save di core data
+        //save data to variable
         castingPrice = Double(price) ?? 0.0
         print("Total : \(price)")
         

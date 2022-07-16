@@ -57,6 +57,7 @@ class AddTransactionViewController: UIViewController {
         pickerCategory = ["Needs","Wants","Savings"]
         priceTextField.text = String(priceT)
         
+        
         if dateTextField.text!.isEmpty{
             formatter.dateStyle = .medium
             formatter.timeStyle = .short
@@ -174,7 +175,7 @@ class AddTransactionViewController: UIViewController {
         print(categoryT)
         
         if let budget = getBudget() {
-            saveTransactions(budget: budget, timestamp: Date.now, name: titleT, price: priceT, type: "Hello", path_data: "Hello")
+            saveTransactions(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello", path_data: "Hello")
         }
         
         //        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController

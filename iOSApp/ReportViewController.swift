@@ -111,10 +111,11 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.titleLabel.text = transaction.name
         
-        let formatter = DateFormatter()
-        let datePicker = UIDatePicker()
-        formatter.dateStyle = .medium
-        cell.dateTimeLabel.text = formatter.string(from: datePicker.date)
+        let dateFormatter = DateFormatter()
+        dateFormatter.timeZone = TimeZone.current
+        dateFormatter.locale = NSLocale.current
+        dateFormatter.dateFormat = "dd/MM/yyyy, HH:mm"
+        cell.dateTimeLabel.text = dateFormatter.string(from: transaction.timestamp ?? Date.now)
         
         cell.priceLabel.text = String(transaction.price)
         
