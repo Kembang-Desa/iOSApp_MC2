@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		661E0AF62882BA3C002238E1 /* InputSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */; };
 		66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE728733B1D00183F3C /* SpeechButoon.swift */; };
 		66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE928733B6500183F3C /* SwiftUI Speech.swift */; };
 		66545BEC28733BAB00183F3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BEB28733BAB00183F3C /* ContentView.swift */; };
@@ -38,6 +39,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSpeechViewController.swift; sourceTree = "<group>"; };
 		66545BE728733B1D00183F3C /* SpeechButoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButoon.swift; sourceTree = "<group>"; };
 		66545BE928733B6500183F3C /* SwiftUI Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
 		66545BEB28733BAB00183F3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -81,6 +83,14 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		661E0AF42882BA18002238E1 /* InputSpeech */ = {
+			isa = PBXGroup;
+			children = (
+				661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */,
+			);
+			name = InputSpeech;
+			sourceTree = "<group>";
+		};
 		66545BDC28732DFA00183F3C /* Speech */ = {
 			isa = PBXGroup;
 			children = (
@@ -113,6 +123,7 @@
 		7E75B136287303A50070D097 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				661E0AF42882BA18002238E1 /* InputSpeech */,
 				7E75B142287303DE0070D097 /* InputScan */,
 				7E75B137287303B70070D097 /* Cell */,
 				7E75B140287303C50070D097 /* DashboardViewController.swift */,
@@ -282,6 +293,7 @@
 				7ECF7303288071BF007D0B08 /* Transaction+CoreDataProperties.swift in Sources */,
 				7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */,
 				7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */,
+				661E0AF62882BA3C002238E1 /* InputSpeechViewController.swift in Sources */,
 				66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,

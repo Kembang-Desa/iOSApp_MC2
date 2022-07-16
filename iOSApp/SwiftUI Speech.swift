@@ -137,7 +137,7 @@ public class SwiftUISpeech: ObservableObject{
     @Published var isRecording:Bool = false
     @Published var button = SpeechButton()
     
-    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "id-ID"))
+    private let speechRecognizer = SFSpeechRecognizer(locale: Locale(identifier: "en-US"))
     private var recognitionRequest: SFSpeechAudioBufferRecognitionRequest?
     private let authStat = SFSpeechRecognizer.authorizationStatus()
     private var recognitionTask: SFSpeechRecognitionTask?

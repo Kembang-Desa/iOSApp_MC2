@@ -9,8 +9,14 @@ import SwiftUI
 import Speech
 
 
+class ContentViewDelegate: ObservableObject {
+    @Published var speechText: String = ""
+}
+
 struct ContentView: View {
+    @ObservedObject var delegate : ContentViewDelegate
     @EnvironmentObject var swiftUISpeech:SwiftUISpeech
+    @State var outputText: String = ""
     
     var body: some View {
         VStack (spacing:150){
@@ -26,23 +32,42 @@ struct ContentView: View {
                 //Spacer()
             }
             VStack{
-                Text("\(swiftUISpeech.outputText)")
+                Text("\(outputText)")
                 // prints results to screen
                     .font(.title)
                     .bold()
-                    
+                    .onChange(of: swiftUISpeech.outputText) { newValue in
+                        outputText = newValue
+                        var splitted = outputText.components(separatedBy: " ")
+                        if let idSpend = splitted.firstIndex(of: "spend"){
+                            print(idSpend)
+                            if(idSpend+1 < splitted.count){
+                                print(splitted[idSpend+1])
+                            }
+                        }
+                        if let idSpend = splitted.firstIndex(of: "for"){
+                            print(idSpend)
+                            if(idSpend+1 < splitted.count){
+                                print(splitted[idSpend+1])
+                            }
+                        }
+                        if let idSpend = splitted.firstIndex(of: "category"){
+                            print(idSpend)
+                            if(idSpend+1 < splitted.count){
+                                print(splitted[idSpend+1])
+                            }
+                        }
+                        
+                        self.$delegate.speechText.wrappedValue = newValue
+                        print()
+                    }
+
+
             }.frame(width: 300,height: 200)
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(.blue, lineWidth: 4))
-        
         }
-    }
-}
-
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView().environmentObject(SwiftUISpeech())
     }
 }
