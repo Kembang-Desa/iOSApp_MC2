@@ -23,9 +23,9 @@ class AddTransactionViewController: UIViewController {
     // add variable type, if image view is image, if speech maka diisi speech
     
     let datePicker = UIDatePicker()
-    let timePicker = UIDatePicker()
+//    let timePicker = UIDatePicker()
     let formatter = DateFormatter()
-    let formatter1 = DateFormatter()
+//    let formatter1 = DateFormatter()
     
     var budget: Budget?
     
@@ -57,18 +57,19 @@ class AddTransactionViewController: UIViewController {
         pickerCategory = ["Needs","Wants","Savings"]
         priceTextField.text = String(priceT)
         
-        if dateTextField.text!.isEmpty && timeTextField.text!.isEmpty{
+        if dateTextField.text!.isEmpty{
             formatter.dateStyle = .medium
+            formatter.timeStyle = .short
             dateTextField.text = formatter.string(from: datePicker.date)
             
-            formatter1.timeStyle = .short
-            timeTextField.text = formatter1.string(from: timePicker.date)
+//            formatter1.timeStyle = .short
+//            timeTextField.text = formatter1.string(from: timePicker.date)
         }
         
         createDatePicker()
         datePicker.preferredDatePickerStyle = .wheels
-        createTimePicker()
-        timePicker.preferredDatePickerStyle = .wheels
+//        createTimePicker()
+//        timePicker.preferredDatePickerStyle = .wheels
     }
     
     @objc func dismissKeyboard() {
@@ -104,40 +105,40 @@ class AddTransactionViewController: UIViewController {
         dateTextField.inputAccessoryView = toolbar
         
         dateTextField.inputView = datePicker
-        datePicker.datePickerMode = .date
+        datePicker.datePickerMode = .dateAndTime
     }
     
     
     @objc func doneDatePressed(){
         formatter.dateStyle = .medium
-        formatter.timeStyle = .none
+        formatter.timeStyle = .short
         
         dateTextField.text = formatter.string(from: datePicker.date)
         self.view.endEditing(true)
         
     }
     
-    func createTimePicker(){
-        let toolbar = UIToolbar()
-        toolbar.sizeToFit()
+//    func createTimePicker(){
+//        let toolbar = UIToolbar()
+//        toolbar.sizeToFit()
+//
+//        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneTimePressed))
+//        toolbar.setItems([doneBtn], animated: true)
+//
+//        timeTextField.inputAccessoryView = toolbar
         
-        let doneBtn = UIBarButtonItem(barButtonSystemItem: .done, target: nil, action: #selector(doneTimePressed))
-        toolbar.setItems([doneBtn], animated: true)
-        
-        timeTextField.inputAccessoryView = toolbar
-        
-        timeTextField.inputView = timePicker
-        timePicker.datePickerMode = .time
-    }
+//        timeTextField.inputView = timePicker
+//        timePicker.datePickerMode = .time
+//    }
     
     
-    @objc func doneTimePressed(){
-        formatter1.timeStyle = .short
-        
-        timeTextField.text = formatter1.string(from: timePicker.date)
-        self.view.endEditing(true)
-        
-    }
+//    @objc func doneTimePressed(){
+//        formatter1.timeStyle = .short
+//
+//        timeTextField.text = formatter1.string(from: timePicker.date)
+//        self.view.endEditing(true)
+//
+//    }
     
     func getBudget() -> Budget?{
         var budgets: [Budget] = []

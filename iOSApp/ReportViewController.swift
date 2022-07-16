@@ -10,6 +10,8 @@ import CoreData
 
 class ReportViewController: UIViewController {
 
+    @IBOutlet weak var control: UISegmentedControl!
+    
     @IBOutlet weak var transactionTable: UITableView!
     var transactions: [Transaction] = []
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
@@ -28,10 +30,19 @@ class ReportViewController: UIViewController {
         transactionTable.delegate = self
         transactionTable.dataSource = self
         
-        fetchTransactions()
-        transactionTable.reloadData()
-        
-        
+    }
+    
+    @IBAction func didChangeSegment(_ sender: UISegmentedControl){
+        if sender.selectedSegmentIndex == 0 {
+            fetchTransactions(statusCategory: "Needs")
+            transactionTable.reloadData()
+        }else if sender.selectedSegmentIndex == 1 {
+            fetchTransactions(statusCategory: "Wants")
+            transactionTable.reloadData()
+        }else if sender.selectedSegmentIndex == 2 {
+            fetchTransactions(statusCategory: "Savings")
+            transactionTable.reloadData()
+        }
     }
     
     func getBudget(category: String) -> Budget?{
@@ -51,9 +62,9 @@ class ReportViewController: UIViewController {
         return nil
     }
     
-    func fetchTransactions(){
+    func fetchTransactions(statusCategory: String){
         
-        if let budget = getBudget(category: "Needs"){
+        if let budget = getBudget(category: statusCategory){
             
             let request: NSFetchRequest<Transaction> = Transaction.fetchRequest()
             request.predicate = NSPredicate(format: "(price > 0) AND (budget = %@)", budget)
@@ -65,7 +76,6 @@ class ReportViewController: UIViewController {
                 print("Error while fetch transactions")
             }
         }
-        
     }
 
     /*
@@ -79,10 +89,13 @@ class ReportViewController: UIViewController {
     */
     
     override func viewWillAppear(_ animated: Bool) {
-        fetchTransactions()
+        fetchTransactions(statusCategory: "Needs")
         transactionTable.reloadData()
     }
 
+    override func viewWillDisappear(_ animated: Bool) {
+        control.selectedSegmentIndex = 0
+    }
 }
 
 
