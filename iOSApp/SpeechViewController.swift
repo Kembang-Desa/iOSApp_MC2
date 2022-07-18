@@ -48,10 +48,50 @@ class SpeechViewController: UIViewController {
 //    }
     
     @IBAction func goTonextpage(_ sender: Any) {
+        var title = ""
+        var price = 0.0
+        var category = ""
+        let output = outputText
+        
         if(!self.outputText.isEmpty){
-            performSegue(withIdentifier: "goToNextPage", sender: nil)
+            var splitted = self.outputText.components(separatedBy: " ")
+            if let idSpend = splitted.firstIndex(of: "spent"){
+                print(idSpend)
+                if(idSpend+1 < splitted.count){
+                    print(splitted[idSpend+1])
+                    price = Double(splitted[idSpend+1]) ?? 0
+                }
+            }
+            if let idFor = splitted.firstIndex(of: "for"){
+                print(idFor)
+                if(idFor+1 < splitted.count){
+                    print(splitted[idFor+1])
+                    title = splitted[idFor+1]
+                }
+            }
+            if let idCategory = splitted.firstIndex(of: "category"){
+                print(idCategory)
+                if(idCategory+1 < splitted.count){
+                    print(splitted[idCategory+1])
+                    category = splitted[idCategory+1]
+                }
+            }
+            
+            
+            let displayVC : InputSpeechViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "goToNextPage") as! InputSpeechViewController
+//            performSegue(withIdentifier: "goToNextPage", sender: nil)
+            displayVC.priceT = price
+            displayVC.titleT = title
+            displayVC.categoryT = category
+            displayVC.outputT = output
+            
+            
+            self.navigationController?.pushViewController(displayVC, animated: false)
+            
+            self.dismiss(animated: true)
         }
     }
-    
+
 
 }
+

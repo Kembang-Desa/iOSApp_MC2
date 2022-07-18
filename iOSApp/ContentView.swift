@@ -63,11 +63,12 @@ struct ContentView: View {
                     }
 
 
-            }.frame(width: 300,height: 200)
+            }.frame(width: 300,height: 100)
                 .padding()
                 .overlay(
                     RoundedRectangle(cornerRadius: 16)
                         .stroke(.blue, lineWidth: 4))
         }
+        
     }
 }
