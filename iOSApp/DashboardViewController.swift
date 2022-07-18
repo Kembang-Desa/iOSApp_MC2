@@ -71,7 +71,8 @@ class DashboardViewController: UIViewController {
         transaction1.name = "Beli Bakso"
         transaction1.price = 1000000.0
         transaction1.type = "Image"
-        transaction1.path_data = "path data"
+//        transaction1.path_data = "path data"
+        transaction1.setValue(UIImage(named: "bgOnboarding")?.pngData(), forKey: "path_data")
 
         let transaction2 = Transaction(context: context)
         transaction2.uuid = UUID()
@@ -79,7 +80,7 @@ class DashboardViewController: UIViewController {
         transaction2.name = "Beli Bakso"
         transaction2.price = 1000000.0
         transaction2.type = "Image"
-        transaction2.path_data = "path data"
+//        transaction2.path_data = "path data"
 
         let transaction3 = Transaction(context: context)
         transaction3.uuid = UUID()
@@ -87,7 +88,7 @@ class DashboardViewController: UIViewController {
         transaction3.name = "Beli Bakso"
         transaction3.price = 1000000.0
         transaction3.type = "Image"
-        transaction3.path_data = "path data"
+//        transaction3.path_data = "path data"
 
         let transaction4 = Transaction(context: context)
         transaction4.uuid = UUID()
@@ -95,19 +96,19 @@ class DashboardViewController: UIViewController {
         transaction4.name = "Beli Bakso"
         transaction4.price = 1000000.0
         transaction4.type = "Image"
-        transaction4.path_data = "path data"
+//        transaction4.path_data = "path data"
         
 
         var transactions: [Transaction] = []
         transactions.append(transaction1)
-        transactions.append(transaction2)
-        transactions.append(transaction3)
-        transactions.append(transaction4)
+//        transactions.append(transaction2)
+//        transactions.append(transaction3)
+//        transactions.append(transaction4)
         
         budget.addToTransactions(transaction1)
-        budget.addToTransactions(transaction2)
-        budget.addToTransactions(transaction3)
-        budget.addToTransactions(transaction4)
+//        budget.addToTransactions(transaction2)
+//        budget.addToTransactions(transaction3)
+//        budget.addToTransactions(transaction4)
         
         if(context.hasChanges){
             do {

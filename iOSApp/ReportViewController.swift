@@ -118,6 +118,7 @@ extension ReportViewController: UITableViewDelegate, UITableViewDataSource {
         cell.dateTimeLabel.text = dateFormatter.string(from: transaction.timestamp ?? Date.now)
         
         cell.priceLabel.text = String(transaction.price)
+//      cell.img.image = UIImage(data: transaction.path_data!)
         
         return cell
     }

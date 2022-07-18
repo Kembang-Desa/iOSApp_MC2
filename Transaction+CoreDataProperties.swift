@@ -2,7 +2,7 @@
 //  Transaction+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Rivaldo Fernandes on 14/07/22.
+//  Created by Ditha Nurcahya Avianty on 18/07/22.
 //
 //
 
@@ -17,11 +17,11 @@ extension Transaction {
     }
 
     @NSManaged public var name: String?
+    @NSManaged public var path_data: Data?
     @NSManaged public var price: Double
     @NSManaged public var timestamp: Date?
-    @NSManaged public var uuid: UUID?
-    @NSManaged public var path_data: String?
     @NSManaged public var type: String?
+    @NSManaged public var uuid: UUID?
     @NSManaged public var budget: Budget?
 
 }

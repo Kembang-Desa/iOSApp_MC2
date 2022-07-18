@@ -48,6 +48,7 @@ class AddTransactionViewController: UIViewController {
         categoryPicker.delegate = self
         categoryPicker.dataSource = self
         
+        
         if imageIsNullOrNot(imageName: imageT){
             receiptImage.image = imageT
         }else{
@@ -73,7 +74,7 @@ class AddTransactionViewController: UIViewController {
 //        timePicker.preferredDatePickerStyle = .wheels
     }
     
-    override func viewDidDisappear(_ animated: Bool) {
+    override func viewWillDisappear(_ animated: Bool) {
         self.tabBarController?.tabBar.isHidden = false
     }
     
@@ -170,7 +171,12 @@ class AddTransactionViewController: UIViewController {
         print(categoryT)
         
         if let budget = getBudget() {
-            saveTransactions(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello", path_data: "Hello")
+            if imageIsNullOrNot(imageName: imageT){
+                saveTransactionsImage(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello", path_data: imageT.pngData()!)
+            }else{
+                saveTransactions(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello")
+            }
+            
         }
         
         //        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController
@@ -188,7 +194,30 @@ class AddTransactionViewController: UIViewController {
         self.present(alert, animated: true, completion: nil)
     }
     
-    func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String, path_data: String){
+    func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String){
+
+        let transaction = Transaction(context: context)
+        transaction.uuid = UUID()
+        transaction.timestamp = timestamp
+        transaction.name = name
+        transaction.price = price
+        transaction.type = type
+        
+        budget.addToTransactions(transaction)
+
+        if(context.hasChanges){
+            do {
+                try context.save()
+                print("transaction saving.....")
+            }catch{
+                print("error while saving transactions \(error)")
+            }
+        }else{
+            print("context not changes")
+        }
+    }
+    
+    func saveTransactionsImage(budget:Budget, timestamp: Date, name:String, price: Double, type: String, path_data: Data){
 
         let transaction = Transaction(context: context)
         transaction.uuid = UUID()

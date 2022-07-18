@@ -47,6 +47,10 @@ class SpeechViewController: UIViewController {
 //            action: nil)
 //    }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        self.tabBarController?.tabBar.isHidden = false
+    }
+    
     @IBAction func goTonextpage(_ sender: Any) {
         var title = ""
         var price = 0.0

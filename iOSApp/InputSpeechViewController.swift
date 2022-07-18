@@ -82,6 +82,7 @@ class InputSpeechViewController: UIViewController {
         
     }
     
+    
     func getBudget() -> Budget?{
         var budgets: [Budget] = []
         
@@ -99,7 +100,7 @@ class InputSpeechViewController: UIViewController {
         return nil
     }
     
-    func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String, path_data: String){
+    func saveTransactions(budget:Budget, timestamp: Date, name:String, price: Double, type: String){
         
         let transaction = Transaction(context: context)
         transaction.uuid = UUID()
@@ -107,7 +108,7 @@ class InputSpeechViewController: UIViewController {
         transaction.name = name
         transaction.price = price
         transaction.type = type
-        transaction.path_data = path_data
+//        transaction.path_data = path_data
         
         budget.addToTransactions(transaction)
         
@@ -135,7 +136,7 @@ class InputSpeechViewController: UIViewController {
         print(categoryT)
         
         if let budget = getBudget() {
-            saveTransactions(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello", path_data: "Hello")
+            saveTransactions(budget: budget, timestamp: datePicker.date, name: titleT, price: priceT, type: "Hello")
         }
         
         //        let displayVC : ReportViewController = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(withIdentifier: "reportID") as! ReportViewController

@@ -2,7 +2,7 @@
 //  Budget+CoreDataProperties.swift
 //  iOSApp
 //
-//  Created by Rivaldo Fernandes on 14/07/22.
+//  Created by Ditha Nurcahya Avianty on 18/07/22.
 //
 //
 
@@ -16,8 +16,8 @@ extension Budget {
         return NSFetchRequest<Budget>(entityName: "Budget")
     }
 
-    @NSManaged public var name: String?
     @NSManaged public var max_limit: Double
+    @NSManaged public var name: String?
     @NSManaged public var transactions: NSSet?
 
 }
