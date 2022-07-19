@@ -30,13 +30,28 @@
 		AC35CC9E2862114400CB9AA6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC35CC9C2862114400CB9AA6 /* Main.storyboard */; };
 		AC35CCA02862114500CB9AA6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AC35CC9F2862114500CB9AA6 /* Assets.xcassets */; };
 		AC35CCA32862114500CB9AA6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AC35CCA12862114500CB9AA6 /* LaunchScreen.storyboard */; };
-		ACBA770B2885B0A600F0CC48 /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA77052885B0A600F0CC48 /* User+CoreDataClass.swift */; };
-		ACBA770C2885B0A600F0CC48 /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA77062885B0A600F0CC48 /* User+CoreDataProperties.swift */; };
-		ACBA770D2885B0A600F0CC48 /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA77072885B0A600F0CC48 /* Budget+CoreDataClass.swift */; };
-		ACBA770E2885B0A600F0CC48 /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA77082885B0A600F0CC48 /* Budget+CoreDataProperties.swift */; };
-		ACBA770F2885B0A600F0CC48 /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA77092885B0A600F0CC48 /* Transaction+CoreDataClass.swift */; };
-		ACBA77102885B0A600F0CC48 /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACBA770A2885B0A600F0CC48 /* Transaction+CoreDataProperties.swift */; };
+		ACC363AB288697D700C4FCBE /* User+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A3288697D700C4FCBE /* User+CoreDataClass.swift */; };
+		ACC363AC288697D700C4FCBE /* User+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A4288697D700C4FCBE /* User+CoreDataProperties.swift */; };
+		ACC363AD288697D700C4FCBE /* UndoneTransaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A5288697D700C4FCBE /* UndoneTransaction+CoreDataClass.swift */; };
+		ACC363AE288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A6288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift */; };
+		ACC363AF288697D700C4FCBE /* Budget+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A7288697D700C4FCBE /* Budget+CoreDataClass.swift */; };
+		ACC363B0288697D700C4FCBE /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */; };
+		ACC363B1288697D700C4FCBE /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */; };
+		ACC363B2288697D700C4FCBE /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */; };
 /* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		ACBA773B2885C58200F0CC48 /* Embed Watch Content */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "$(CONTENTS_FOLDER_PATH)/Watch";
+			dstSubfolderSpec = 16;
+			files = (
+			);
+			name = "Embed Watch Content";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSpeechViewController.swift; sourceTree = "<group>"; };
@@ -64,12 +79,14 @@
 		AC35CC9F2862114500CB9AA6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		AC35CCA22862114500CB9AA6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		AC35CCA42862114500CB9AA6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		ACBA77052885B0A600F0CC48 /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		ACBA77062885B0A600F0CC48 /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		ACBA77072885B0A600F0CC48 /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		ACBA77082885B0A600F0CC48 /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
-		ACBA77092885B0A600F0CC48 /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
-		ACBA770A2885B0A600F0CC48 /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A3288697D700C4FCBE /* User+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A4288697D700C4FCBE /* User+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "User+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A5288697D700C4FCBE /* UndoneTransaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UndoneTransaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A6288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UndoneTransaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A7288697D700C4FCBE /* Budget+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
+		ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,12 +186,14 @@
 		7ECF72E628805E6A007D0B08 /* CoreData */ = {
 			isa = PBXGroup;
 			children = (
-				ACBA77052885B0A600F0CC48 /* User+CoreDataClass.swift */,
-				ACBA77062885B0A600F0CC48 /* User+CoreDataProperties.swift */,
-				ACBA77072885B0A600F0CC48 /* Budget+CoreDataClass.swift */,
-				ACBA77082885B0A600F0CC48 /* Budget+CoreDataProperties.swift */,
-				ACBA77092885B0A600F0CC48 /* Transaction+CoreDataClass.swift */,
-				ACBA770A2885B0A600F0CC48 /* Transaction+CoreDataProperties.swift */,
+				ACC363A3288697D700C4FCBE /* User+CoreDataClass.swift */,
+				ACC363A4288697D700C4FCBE /* User+CoreDataProperties.swift */,
+				ACC363A5288697D700C4FCBE /* UndoneTransaction+CoreDataClass.swift */,
+				ACC363A6288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift */,
+				ACC363A7288697D700C4FCBE /* Budget+CoreDataClass.swift */,
+				ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */,
+				ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */,
+				ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */,
 				7ECF72E728805F0F007D0B08 /* iOSApp.xcdatamodeld */,
 			);
 			name = CoreData;
@@ -226,6 +245,7 @@
 				AC35CC8F2862114400CB9AA6 /* Sources */,
 				AC35CC902862114400CB9AA6 /* Frameworks */,
 				AC35CC912862114400CB9AA6 /* Resources */,
+				ACBA773B2885C58200F0CC48 /* Embed Watch Content */,
 			);
 			buildRules = (
 			);
@@ -292,25 +312,27 @@
 			files = (
 				7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */,
 				7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */,
-				ACBA770F2885B0A600F0CC48 /* Transaction+CoreDataClass.swift in Sources */,
 				661E0AF62882BA3C002238E1 /* InputSpeechViewController.swift in Sources */,
 				66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */,
+				ACC363B1288697D700C4FCBE /* Transaction+CoreDataClass.swift in Sources */,
+				ACC363B2288697D700C4FCBE /* Transaction+CoreDataProperties.swift in Sources */,
 				7E75B1512873048B0070D097 /* SettingViewController.swift in Sources */,
 				7E75B144287303E80070D097 /* ScanViewController.swift in Sources */,
 				7E75B141287303C50070D097 /* DashboardViewController.swift in Sources */,
 				66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */,
-				ACBA770D2885B0A600F0CC48 /* Budget+CoreDataClass.swift in Sources */,
 				7ECF72E928805F0F007D0B08 /* iOSApp.xcdatamodeld in Sources */,
 				AC35CC9B2862114400CB9AA6 /* ViewController.swift in Sources */,
-				ACBA770C2885B0A600F0CC48 /* User+CoreDataProperties.swift in Sources */,
+				ACC363AC288697D700C4FCBE /* User+CoreDataProperties.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
+				ACC363AE288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift in Sources */,
 				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
-				ACBA770B2885B0A600F0CC48 /* User+CoreDataClass.swift in Sources */,
+				ACC363B0288697D700C4FCBE /* Budget+CoreDataProperties.swift in Sources */,
+				ACC363AF288697D700C4FCBE /* Budget+CoreDataClass.swift in Sources */,
+				ACC363AD288697D700C4FCBE /* UndoneTransaction+CoreDataClass.swift in Sources */,
+				ACC363AB288697D700C4FCBE /* User+CoreDataClass.swift in Sources */,
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
-				ACBA770E2885B0A600F0CC48 /* Budget+CoreDataProperties.swift in Sources */,
-				ACBA77102885B0A600F0CC48 /* Transaction+CoreDataProperties.swift in Sources */,
 				7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */,
 				66545BEC28733BAB00183F3C /* ContentView.swift in Sources */,
 			);

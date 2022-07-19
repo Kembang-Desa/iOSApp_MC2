@@ -2,7 +2,7 @@
 //  Budget+CoreDataClass.swift
 //  iOSApp
 //
-//  Created by Ditha Nurcahya Avianty on 18/07/22.
+//  Created by Ditha Nurcahya Avianty on 19/07/22.
 //
 //
 
