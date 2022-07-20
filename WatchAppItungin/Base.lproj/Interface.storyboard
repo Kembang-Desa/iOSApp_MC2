@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mah-nc-69V">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -17,7 +17,7 @@
                             <color key="backgroundColor" name="AccentColor"/>
                         </button>
                         <label width="136" height="60" alignment="center" text="Tap and Say “iTungin, I buy (my item) for (price)”" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="3" id="At5-F7-aQV">
-                            <fontDescription key="font" style="UICTFontTextStyleCaption1"/>
+                            <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
                         </label>
                     </items>
                     <connections>
@@ -27,18 +27,35 @@
             </objects>
             <point key="canvasLocation" x="-17" y="344.5"/>
         </scene>
-        <!--Interface Controller-->
-        <scene sceneID="d6V-FB-qNc">
+        <!--List Interface Controller-->
+        <scene sceneID="Gsw-Ka-8Eb">
             <objects>
-                <controller id="gsd-6r-YUP">
+                <controller id="Mah-nc-69V" customClass="ListInterfaceController" customModule="WatchAppItungin_WatchKit_Extension">
                     <items>
-                        <group width="1" alignment="left" layout="vertical" id="j6Z-uw-PiN">
+                        <table alignment="left" id="9IC-WH-d0W">
                             <items>
-                                <label width="51" height="28" alignment="left" text="Label" id="T9P-UZ-Sqd"/>
-                                <label width="51" height="28" alignment="left" text="1500" id="cTs-zm-r6t"/>
+                                <tableRow identifier="RowController" id="jSz-Dn-0ng" customClass="RowController" customModule="WatchAppItungin_WatchKit_Extension">
+                                    <group key="rootItem" width="1" height="46" alignment="left" layout="vertical" id="cmM-oq-QZG">
+                                        <items>
+                                            <label alignment="left" text="Label" id="yvJ-Bi-WRc"/>
+                                            <label alignment="left" text="Label" id="4uo-W8-yPi">
+                                                <color key="textColor" white="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <fontDescription key="font" style="UICTFontTextStyleFootnote"/>
+                                            </label>
+                                        </items>
+                                        <edgeInsets key="margins" left="0.0" right="0.0" top="0.0" bottom="0.0"/>
+                                    </group>
+                                    <connections>
+                                        <outlet property="rowPrice" destination="4uo-W8-yPi" id="ug2-1W-94a"/>
+                                        <outlet property="rowTitle" destination="yvJ-Bi-WRc" id="A0r-l0-J9n"/>
+                                    </connections>
+                                </tableRow>
                             </items>
-                        </group>
+                        </table>
                     </items>
+                    <connections>
+                        <outlet property="tableView" destination="9IC-WH-d0W" id="RHR-SH-wCv"/>
+                    </connections>
                 </controller>
             </objects>
             <point key="canvasLocation" x="220" y="345"/>

@@ -16,6 +16,8 @@
 		660A58F92887F0B200FDCFAA /* ComplicationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A58F82887F0B200FDCFAA /* ComplicationController.swift */; };
 		660A58FB2887F0B300FDCFAA /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 660A58FA2887F0B300FDCFAA /* Assets.xcassets */; };
 		660A59002887F0B300FDCFAA /* WatchAppItungin.app in Embed Watch Content */ = {isa = PBXBuildFile; fileRef = 660A58E22887F0B200FDCFAA /* WatchAppItungin.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		660A590B2887FB9500FDCFAA /* ListInterfaceController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A590A2887FB9500FDCFAA /* ListInterfaceController.swift */; };
+		660A590D2887FC9400FDCFAA /* RowController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 660A590C2887FC9400FDCFAA /* RowController.swift */; };
 		661E0AF62882BA3C002238E1 /* InputSpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */; };
 		66545BE828733B1D00183F3C /* SpeechButoon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE728733B1D00183F3C /* SpeechButoon.swift */; };
 		66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE928733B6500183F3C /* SwiftUI Speech.swift */; };
@@ -103,6 +105,8 @@
 		660A58FA2887F0B300FDCFAA /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		660A58FC2887F0B300FDCFAA /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		660A58FD2887F0B300FDCFAA /* PushNotificationPayload.apns */ = {isa = PBXFileReference; lastKnownFileType = text; path = PushNotificationPayload.apns; sourceTree = "<group>"; };
+		660A590A2887FB9500FDCFAA /* ListInterfaceController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListInterfaceController.swift; sourceTree = "<group>"; };
+		660A590C2887FC9400FDCFAA /* RowController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RowController.swift; sourceTree = "<group>"; };
 		661E0AF52882BA3C002238E1 /* InputSpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputSpeechViewController.swift; sourceTree = "<group>"; };
 		66545BE728733B1D00183F3C /* SpeechButoon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechButoon.swift; sourceTree = "<group>"; };
 		66545BE928733B6500183F3C /* SwiftUI Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
@@ -169,6 +173,8 @@
 			isa = PBXGroup;
 			children = (
 				660A58F22887F0B200FDCFAA /* InterfaceController.swift */,
+				660A590A2887FB9500FDCFAA /* ListInterfaceController.swift */,
+				660A590C2887FC9400FDCFAA /* RowController.swift */,
 				660A58F42887F0B200FDCFAA /* ExtensionDelegate.swift */,
 				660A58F62887F0B200FDCFAA /* NotificationController.swift */,
 				660A58F82887F0B200FDCFAA /* ComplicationController.swift */,
@@ -453,10 +459,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				660A590D2887FC9400FDCFAA /* RowController.swift in Sources */,
 				660A58F72887F0B200FDCFAA /* NotificationController.swift in Sources */,
 				660A58F92887F0B200FDCFAA /* ComplicationController.swift in Sources */,
 				660A58F52887F0B200FDCFAA /* ExtensionDelegate.swift in Sources */,
 				660A58F32887F0B200FDCFAA /* InterfaceController.swift in Sources */,
+				660A590B2887FB9500FDCFAA /* ListInterfaceController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
