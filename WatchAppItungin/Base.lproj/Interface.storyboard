@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="Mah-nc-69V">
+<document type="com.apple.InterfaceBuilder.WatchKit.Storyboard" version="3.0" toolsVersion="20037" targetRuntime="watchKit" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="AgC-eL-Hgc">
     <device id="watch38"/>
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="20020"/>
@@ -15,6 +15,9 @@
                         <button width="101" height="84" alignment="center" backgroundImage="mic.circle.fill" catalog="system" id="acv-Kk-kLc">
                             <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                             <color key="backgroundColor" name="AccentColor"/>
+                            <connections>
+                                <action selector="didRecord" destination="AgC-eL-Hgc" id="TMf-Rv-MQq"/>
+                            </connections>
                         </button>
                         <label width="136" height="60" alignment="center" text="Tap and Say “iTungin, I buy (my item) for (price)”" textAlignment="center" baselineAdjustment="alignCenters" numberOfLines="3" id="At5-F7-aQV">
                             <fontDescription key="font" style="UICTFontTextStyleFootnote"/>

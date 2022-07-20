@@ -49,6 +49,9 @@
 		ACC363B0288697D700C4FCBE /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */; };
 		ACC363B1288697D700C4FCBE /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */; };
 		ACC363B2288697D700C4FCBE /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */; };
+		ACF80EE2288850510064738A /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE1288850510064738A /* ViewModelPhone.swift */; };
+		ACF80EE4288850890064738A /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE3288850890064738A /* FileManager.swift */; };
+		ACF80EE7288850C30064738A /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE6288850C30064738A /* ViewModelWatch.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -140,6 +143,9 @@
 		ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Budget+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
 		ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataClass.swift"; sourceTree = SOURCE_ROOT; };
 		ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Transaction+CoreDataProperties.swift"; sourceTree = SOURCE_ROOT; };
+		ACF80EE1288850510064738A /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
+		ACF80EE3288850890064738A /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
+		ACF80EE6288850C30064738A /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -172,15 +178,15 @@
 		660A58F12887F0B200FDCFAA /* WatchAppItungin WatchKit Extension */ = {
 			isa = PBXGroup;
 			children = (
-				660A58F22887F0B200FDCFAA /* InterfaceController.swift */,
-				660A590A2887FB9500FDCFAA /* ListInterfaceController.swift */,
-				660A590C2887FC9400FDCFAA /* RowController.swift */,
+				ACF80EE52888509E0064738A /* Controller */,
+				ACF80EE3288850890064738A /* FileManager.swift */,
 				660A58F42887F0B200FDCFAA /* ExtensionDelegate.swift */,
 				660A58F62887F0B200FDCFAA /* NotificationController.swift */,
 				660A58F82887F0B200FDCFAA /* ComplicationController.swift */,
 				660A58FA2887F0B300FDCFAA /* Assets.xcassets */,
 				660A58FC2887F0B300FDCFAA /* Info.plist */,
 				660A58FD2887F0B300FDCFAA /* PushNotificationPayload.apns */,
+				ACF80EE6288850C30064738A /* ViewModelWatch.swift */,
 			);
 			path = "WatchAppItungin WatchKit Extension";
 			sourceTree = "<group>";
@@ -320,8 +326,19 @@
 				AC35CC9F2862114500CB9AA6 /* Assets.xcassets */,
 				AC35CCA12862114500CB9AA6 /* LaunchScreen.storyboard */,
 				AC35CCA42862114500CB9AA6 /* Info.plist */,
+				ACF80EE1288850510064738A /* ViewModelPhone.swift */,
 			);
 			path = iOSApp;
+			sourceTree = "<group>";
+		};
+		ACF80EE52888509E0064738A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				660A58F22887F0B200FDCFAA /* InterfaceController.swift */,
+				660A590A2887FB9500FDCFAA /* ListInterfaceController.swift */,
+				660A590C2887FC9400FDCFAA /* RowController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -461,7 +478,9 @@
 			files = (
 				660A590D2887FC9400FDCFAA /* RowController.swift in Sources */,
 				660A58F72887F0B200FDCFAA /* NotificationController.swift in Sources */,
+				ACF80EE7288850C30064738A /* ViewModelWatch.swift in Sources */,
 				660A58F92887F0B200FDCFAA /* ComplicationController.swift in Sources */,
+				ACF80EE4288850890064738A /* FileManager.swift in Sources */,
 				660A58F52887F0B200FDCFAA /* ExtensionDelegate.swift in Sources */,
 				660A58F32887F0B200FDCFAA /* InterfaceController.swift in Sources */,
 				660A590B2887FB9500FDCFAA /* ListInterfaceController.swift in Sources */,
@@ -487,6 +506,7 @@
 				ACC363AC288697D700C4FCBE /* User+CoreDataProperties.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
+				ACF80EE2288850510064738A /* ViewModelPhone.swift in Sources */,
 				ACC363AE288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift in Sources */,
 				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
 				7E75B147287304040070D097 /* AddTransactionViewController.swift in Sources */,
@@ -549,7 +569,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FYVDX646G;
+				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchAppItungin WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchAppItungin WatchKit Extension";
@@ -579,7 +599,7 @@
 				ASSETCATALOG_COMPILER_COMPLICATION_NAME = Complication;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = 8FYVDX646G;
+				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "WatchAppItungin WatchKit Extension/Info.plist";
 				INFOPLIST_KEY_CFBundleDisplayName = "WatchAppItungin WatchKit Extension";
