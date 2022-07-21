@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 
+
+
 struct InputTransactionMethod {
     var title: String?
     var imageName: String?

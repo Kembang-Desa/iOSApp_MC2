@@ -23,6 +23,7 @@
 		66545BEA28733B6500183F3C /* SwiftUI Speech.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BE928733B6500183F3C /* SwiftUI Speech.swift */; };
 		66545BEC28733BAB00183F3C /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BEB28733BAB00183F3C /* ContentView.swift */; };
 		66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66545BEF28734C9A00183F3C /* SpeechViewController.swift */; };
+		66CB13E9288851F4002D2C09 /* UndoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 66CB13E8288851F4002D2C09 /* UndoneViewController.swift */; };
 		7E14884828730E2300FF7825 /* ReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884728730E2300FF7825 /* ReportViewController.swift */; };
 		7E14884B28730E3600FF7825 /* TransactionTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */; };
 		7E14884C28730E3600FF7825 /* TransactionTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */; };
@@ -112,6 +113,7 @@
 		66545BE928733B6500183F3C /* SwiftUI Speech.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "SwiftUI Speech.swift"; sourceTree = "<group>"; };
 		66545BEB28733BAB00183F3C /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		66545BEF28734C9A00183F3C /* SpeechViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SpeechViewController.swift; sourceTree = "<group>"; };
+		66CB13E8288851F4002D2C09 /* UndoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UndoneViewController.swift; sourceTree = "<group>"; };
 		7E14884728730E2300FF7825 /* ReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ReportViewController.swift; sourceTree = "<group>"; };
 		7E14884928730E3600FF7825 /* TransactionTableViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TransactionTableViewCell.xib; sourceTree = "<group>"; };
 		7E14884A28730E3600FF7825 /* TransactionTableViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TransactionTableViewCell.swift; sourceTree = "<group>"; };
@@ -204,6 +206,14 @@
 			name = Speech;
 			sourceTree = "<group>";
 		};
+		66CB13E3288846B1002D2C09 /* Undone */ = {
+			isa = PBXGroup;
+			children = (
+				66CB13E8288851F4002D2C09 /* UndoneViewController.swift */,
+			);
+			name = Undone;
+			sourceTree = "<group>";
+		};
 		7E14884528730DF800FF7825 /* Report */ = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +235,7 @@
 		7E75B136287303A50070D097 /* Dashboard */ = {
 			isa = PBXGroup;
 			children = (
+				66CB13E3288846B1002D2C09 /* Undone */,
 				661E0AF42882BA18002238E1 /* InputSpeech */,
 				7E75B142287303DE0070D097 /* InputScan */,
 				7E75B137287303B70070D097 /* Cell */,
@@ -497,6 +508,7 @@
 				7E75B13D287303BF0070D097 /* PercentageCollectionViewCell.swift in Sources */,
 				7E75B13C287303BF0070D097 /* InputTableViewCell.swift in Sources */,
 				66545BEC28733BAB00183F3C /* ContentView.swift in Sources */,
+				66CB13E9288851F4002D2C09 /* UndoneViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
