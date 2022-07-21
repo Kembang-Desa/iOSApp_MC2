@@ -44,7 +44,8 @@ class InterfaceController: WKInterfaceController {
 //                self.audio.audio_path_data = ("\(saveURL)")
 //                datas.append(audio)
                 //send message
-                sendMessage(title: "Recording01", audioPath: "\(saveURL)")
+                sendMessage(title: "RecordingX", audioPath: "\(saveURL)")
+//                sendMessage(title: "RecordingX", audioPath: saveURL)
 //                sendMessage(title: "Recording01", audioPath: String(contentsOf: saveURL!))
             } else {
                 print(error?.localizedDescription ?? "Unknown error")
@@ -55,7 +56,7 @@ class InterfaceController: WKInterfaceController {
     func sendMessage(title: String, audioPath: String) {
         // MARK: Send message menggunakan WCSession
         
-        let dataMessage = ["title" : title, "audioPath" : audioPath]
+        let dataMessage = ["title" : title, "audioPath" : audioPath] as [String : Any]
         
         model.wcSession.sendMessage(dataMessage, replyHandler: nil)
     }
