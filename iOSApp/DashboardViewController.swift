@@ -8,6 +8,8 @@
 import UIKit
 import CoreData
 
+import AVFoundation
+
 struct InputTransactionMethod {
     var title: String?
     var imageName: String?
@@ -34,6 +36,8 @@ class DashboardViewController: UIViewController {
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
     var model = ViewModelPhone()
+    
+    var audioPlayer: AVAudioPlayer?
     
     
     func loadAllTransactions(budget: Budget) -> [Transaction] {
@@ -261,6 +265,11 @@ class DashboardViewController: UIViewController {
         print("check if data arrive in ios")
         print(model.dataTitle)
         print(model.dataAudioPath)
+        
+//        guard FileManager.default.fileExists(atPath: model.dataAudioPath.path) else { return }
+//
+//        try? audioPlayer = AVAudioPlayer(contentsOf: model.dataAudioPath)
+//        audioPlayer?.play()
     }
 
 }

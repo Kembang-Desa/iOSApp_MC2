@@ -49,9 +49,11 @@
 		ACC363B0288697D700C4FCBE /* Budget+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A8288697D700C4FCBE /* Budget+CoreDataProperties.swift */; };
 		ACC363B1288697D700C4FCBE /* Transaction+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363A9288697D700C4FCBE /* Transaction+CoreDataClass.swift */; };
 		ACC363B2288697D700C4FCBE /* Transaction+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACC363AA288697D700C4FCBE /* Transaction+CoreDataProperties.swift */; };
+		ACD5FBFA2889434900E6AE32 /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE3288850890064738A /* FileManager.swift */; };
 		ACF80EE2288850510064738A /* ViewModelPhone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE1288850510064738A /* ViewModelPhone.swift */; };
 		ACF80EE4288850890064738A /* FileManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE3288850890064738A /* FileManager.swift */; };
 		ACF80EE7288850C30064738A /* ViewModelWatch.swift in Sources */ = {isa = PBXBuildFile; fileRef = ACF80EE6288850C30064738A /* ViewModelWatch.swift */; };
+		ACF80EF9288865420064738A /* CloudKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = ACF80EF8288865420064738A /* CloudKit.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -146,6 +148,8 @@
 		ACF80EE1288850510064738A /* ViewModelPhone.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelPhone.swift; sourceTree = "<group>"; };
 		ACF80EE3288850890064738A /* FileManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FileManager.swift; sourceTree = "<group>"; };
 		ACF80EE6288850C30064738A /* ViewModelWatch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModelWatch.swift; sourceTree = "<group>"; };
+		ACF80EF6288865350064738A /* iOSApp.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = iOSApp.entitlements; sourceTree = "<group>"; };
+		ACF80EF8288865420064738A /* CloudKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CloudKit.framework; path = System/Library/Frameworks/CloudKit.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -160,6 +164,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ACF80EF9288865420064738A /* CloudKit.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,6 +302,7 @@
 				660A58E32887F0B200FDCFAA /* WatchAppItungin */,
 				660A58F12887F0B200FDCFAA /* WatchAppItungin WatchKit Extension */,
 				AC35CC942862114400CB9AA6 /* Products */,
+				ACF80EF7288865420064738A /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -313,6 +319,7 @@
 		AC35CC952862114400CB9AA6 /* iOSApp */ = {
 			isa = PBXGroup;
 			children = (
+				ACF80EF6288865350064738A /* iOSApp.entitlements */,
 				7ECF72E628805E6A007D0B08 /* CoreData */,
 				66545BDC28732DFA00183F3C /* Speech */,
 				7E14884528730DF800FF7825 /* Report */,
@@ -339,6 +346,14 @@
 				660A590C2887FC9400FDCFAA /* RowController.swift */,
 			);
 			path = Controller;
+			sourceTree = "<group>";
+		};
+		ACF80EF7288865420064738A /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				ACF80EF8288865420064738A /* CloudKit.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -506,6 +521,7 @@
 				ACC363AC288697D700C4FCBE /* User+CoreDataProperties.swift in Sources */,
 				AC35CC972862114400CB9AA6 /* AppDelegate.swift in Sources */,
 				AC35CC992862114400CB9AA6 /* SceneDelegate.swift in Sources */,
+				ACD5FBFA2889434900E6AE32 /* FileManager.swift in Sources */,
 				ACF80EE2288850510064738A /* ViewModelPhone.swift in Sources */,
 				ACC363AE288697D700C4FCBE /* UndoneTransaction+CoreDataProperties.swift in Sources */,
 				66545BF028734C9A00183F3C /* SpeechViewController.swift in Sources */,
@@ -796,16 +812,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = iOSApp/iOSApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents, you must allow the use of the camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of Microphone for Audio Input";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Accepting this means you are willing to have your information sent to Apple for processing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -819,6 +841,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				f = f;
 			};
 			name = Debug;
 		};
@@ -827,16 +850,22 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ALLOW_ENTITLEMENTS_MODIFICATION = YES;
+				CODE_SIGN_ENTITLEMENTS = iOSApp/iOSApp.entitlements;
 				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = C8VS35NTZ7;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = iOSApp/Info.plist;
-				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents you must allow the use of the camera.";
+				INFOPLIST_KEY_NSCameraUsageDescription = "To be able to scan documents, you must allow the use of the camera.";
+				INFOPLIST_KEY_NSMicrophoneUsageDescription = "Usage of Microphone for Audio Input";
+				INFOPLIST_KEY_NSSpeechRecognitionUsageDescription = "Accepting this means you are willing to have your information sent to Apple for processing";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIRequiredDeviceCapabilities = armv7;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -850,6 +879,7 @@
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
+				f = f;
 			};
 			name = Release;
 		};
