@@ -35,6 +35,8 @@ class DashboardViewController: UIViewController {
 
     let context = (UIApplication.shared.delegate as! AppDelegate).persistentContainer.viewContext
     
+    var model = ViewModelPhone()
+    
     
     func loadAllTransactions(budget: Budget) -> [Transaction] {
         let request: NSFetchRequest<Transaction> = Transaction.fetchRequest()
@@ -257,6 +259,10 @@ class DashboardViewController: UIViewController {
         // Do any additional setup after loading the view.
         initDataInputMethod()
         initOverview()
+        
+        print("check if data arrive in ios")
+        print(model.dataTitle)
+        print(model.dataAudioPath)
     }
 
 }
